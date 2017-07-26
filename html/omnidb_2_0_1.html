@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+</head>
+<body>
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<p><em>DBMS</em> stands for <em>database management system</em>. It may be a simple function library or even a larger system composed by several programs and processes running separately and in parallel, whose main function is to manage one or several databases hosted in a server. It has the responsibility to manipulate and to keep the consistency of data, allowing the software developers to focus on functionalities. Thus, practically any modern system that manages data utilizes some kind of DBMS, regardless of the amount of stored information.</p>
+<p><strong>OmniDB</strong>’s first version was created as an undergrad final project in the Computer Science Course from the Federal University of Paraná. The objective was to trace a common line between popular DBMS, and to study deeply their <em>metadata</em>. The result was a tool capable of connecting and identifying the main structures (tables, keys, indexes and constraints), in a generic way, from several DBMS:</p>
+<ul>
+<li>Firebird</li>
+<li>MariaDB / MySQL</li>
+<li>Oracle</li>
+<li>PostgreSQL</li>
+<li>SQLite</li>
+<li>Microsoft SQL Server</li>
+</ul>
+<p>Since early development, OmniDB was designed as an web app. Consequently, it runs in any browser, from any operational system. It can be accessed by several computers and multiple users, each one of them with his/her own group of connections. It also may host any operational system, without the need of install any dependencies. We will see further details on installation in the next chapters.</p>
+<p>OmniDB’s main objective is to offer an unified workspace with all functionalities needed to manipulate different DMBS. DBMS specific tools aren’t required: in OmniDB, the context switch between different DBMS is done with a simple connection switch, without leaving the same page. The end-user’s sensation is that there is no difference when he/she manipulates different DBMS, it just feels like different connections.</p>
+<h1 id="migration-from-.net-mono-to-python"><span class="header-section-number">2</span> Migration from .NET / Mono to Python</h1>
+<p>OmniDB was rewritten to Python using the Django framework. Starting from version <code>2.0</code>, OmniDB Python version will receive new features and will be actively maintained.</p>
+<p>The source code for the ASP.NET/C# version is in the branch <code>csharp</code>. The next release of OmniDB C# version is 1.7, and it will only receive bug fixes.</p>
+<p>OmniDB source code is hosted on <a href="https://github.com/OmniDB/OmniDB">GitHub</a> and there are 3 main branches:</p>
+<ul>
+<li><strong>master</strong>: Contains the current beta release of OmniDB Python version</li>
+<li><strong>dev</strong>: Contains the current development release of OmniDB Python version</li>
+<li><strong>csharp</strong>: Contains the .NET / Mono version of OmniDB</li>
+</ul>
+<p>Besides being written in Python, initial version of OmniDB 2.0 contains the following main differences from the C# version:</p>
+<ul>
+<li>Support to HTTPS;</li>
+<li>It allows query execution in background and cancellation through the use of websockets;</li>
+<li>Initially, only an improved support of PostgreSQL is implemented. More RDBMS support coming soon;</li>
+<li>There is a new Snippet feature;</li>
+<li>Log capabilities and a test suite are being developed;</li>
+<li>You don't need to install dependencies and web servers any more. Everything OmniDB needs is now bundled in a single executable.</li>
+</ul>
+<h1 id="installation"><span class="header-section-number">3</span> Installation</h1>
+<p>In order to run OmniDB, you don't need to install any additional piece of software. Just head to <a href="omnidb.org" class="uri">omnidb.org</a> and download the latest zip package for your specific operating system and architecture:</p>
+<ul>
+<li>Linux 32 bits / 64 bits</li>
+<li>Windows 32 bits / 64 bits</li>
+<li>Mac OSX</li>
+</ul>
+<p>Extract the zip file somewhere in your computer. It will create a folder called <code>omnidb</code>. Get inside this folder and run the <code>omnidb</code> executable.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">user@machine</span>:~$ cd omnidb
+<span class="ex">user@machine</span>:~/omnidb$ ./omnidb
+<span class="ex">Starting</span> OmniDB at http://localhost:12000
+<span class="ex">Open</span> OmniDB in your favorite browser</code></pre></div>
+<p>Now that the web server is running, you may access OmniDB web app on your favorite browser. Type in address bar: <code>localhost:12000</code> and hit <code>Enter</code>. If you are running in any port other than <code>12000</code>, utilize the appropriate port number. If everything went fine, you shall see a page like this:</p>
+<div class="figure">
+<img src="../img/03_installation_01.png" alt="First execution" />
+<p class="caption">First execution</p>
+</div>
+<p>Now you know that OmniDB is running correctly. In the next chapters, we will see how to login for the first time, how to create an user and to utilize OmniDB.</p>
+<h1 id="creating-users-and-connections"><span class="header-section-number">4</span> Creating Users and Connections</h1>
+<h2 id="logging-in-as-user-admin"><span class="header-section-number">4.1</span> Logging in as user <em>admin</em></h2>
+<p>OmniDB comes only with the user <em>admin</em>. The first thing to do is sign in as admin, the default password is admin.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_01.png" alt="Signing in as admin" />
+<p class="caption">Signing in as admin</p>
+</div>
+<p>The next window is the <strong>Connections</strong> window. We will talk about it later.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_02.png" alt="Connections window as admin" />
+<p class="caption">Connections window as admin</p>
+</div>
+<h2 id="creating-another-user"><span class="header-section-number">4.2</span> Creating another user</h2>
+<p>Click on the <em>Users</em> tab.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_03.png" alt="User management window" />
+<p class="caption">User management window</p>
+</div>
+<p>After clicking on the <em>New User</em> button the tool inserts a new user called <em>user2</em> (if that is the first user after <em>admin</em>).</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_04.png" alt="Creating new user" />
+<p class="caption">Creating new user</p>
+</div>
+<p>You will have to change the <em>username</em> and <em>password</em>. Check if you want this new user to be a <em>super user</em>. This user management window is only seem by super users. When you are done, click on the <em>Save Data</em> button.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_05.png" alt="Changing new user attributes" />
+<p class="caption">Changing new user attributes</p>
+</div>
+<p>You can create as many users as you want, edit existing users and also delete users by clicking on the red cross at the actions column. Now you can logout.</p>
+<h2 id="signing-in-as-the-new-user"><span class="header-section-number">4.3</span> Signing in as the new user</h2>
+<p>Let us sign in as the user we just created.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_06.png" alt="Signing in as the new user" />
+<p class="caption">Signing in as the new user</p>
+</div>
+<p>And we can see the <strong>Connections</strong> window again. Note that now there is no <em>Users</em> tab, because the <em>test</em> user is not a super user.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_07.png" alt="Connections window" />
+<p class="caption">Connections window</p>
+</div>
+<h2 id="creating-connections"><span class="header-section-number">4.4</span> Creating connections</h2>
+<p>OmniDB C# version supported several DBMS. At the moment, OmniDB Python version, or <code>OmniDB 2.0</code>, supports only PostgreSQL. More DBMS support is being added as you read this.</p>
+<p>We will now create two connections to PostgreSQL databases. To create the connections you have to click on the button <em>New Connection</em> and then choose the connection and fill the other fields. After filling all the fields for both connections, click on the <em>Save Data</em> button.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_08.png" alt="Some connections created" />
+<p class="caption">Some connections created</p>
+</div>
+<p>For each connection there is an <em>Actions</em> column where you can delete and test them. Go ahead and test one of the connections.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_09.png" alt="Some connections created" />
+<p class="caption">Some connections created</p>
+</div>
+<p>Notice the <em>Password Expired</em> popup. This is happening because OmniDB does not store the database user password on disk. When the user types a password in this popup, the password is encrypted and stored in memory.</p>
+<p>After you type the password and hit <em>Enter</em>, if the connection to the database is successful you will see a confirmation popup.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_10.png" alt="Connection successful" />
+<p class="caption">Connection successful</p>
+</div>
+<p>But, if you have trouble of any kind connecting to your PostgreSQL database, the <em>Password Expired</em> popup will remain showing the error OmniDB got.</p>
+<div class="figure">
+<img src="../img/04_creating_users_and_connections_11.png" alt="Connection unsuccessful" />
+<p class="caption">Connection unsuccessful</p>
+</div>
+</body>
+</html>
