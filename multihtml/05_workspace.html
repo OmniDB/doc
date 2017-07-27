@@ -1,0 +1,88 @@
+<h1 id="workspace">Workspace</h1>
+<p>After creating at least one connection the user can enter the <em>Workspace</em>.</p>
+<div class="figure">
+<img src="../img/05_workspace_01.png" alt="Workspace window" />
+<p class="caption">Workspace window</p>
+</div>
+<h2 id="sections-of-the-workspace-window">Sections of the <em>Workspace</em> window</h2>
+<p>This interface has several elements:</p>
+<div class="figure">
+<img src="../img/05_workspace_02.png" alt="Sections of the Workspace window" />
+<p class="caption">Sections of the Workspace window</p>
+</div>
+<ul>
+<li><strong>1) Links</strong>: Enables the user to navigate between OmniDB windows</li>
+<li><strong>2) Outer Tabs</strong>: OmniDB lets you work with several databases at the same time. Each database will be accessible through an <em>outer tab</em>. Outer tabs also can host miscellaneous features, like the <em>Snippets</em> feature</li>
+<li><strong>3) Tree View</strong>: Depending on the feature, the <em>tree view</em> can show different kinds of elements arranged in a hierarchical tree</li>
+<li><strong>4) Options</strong>: Shows the current user logged in, and also links for <em>user settings</em>, <em>query history</em>, <em>information</em> and <em>logout</em>.</li>
+<li><strong>5) Inner Tabs</strong>: For each <em>outer tab</em> you are working on at the moment, you can open several <em>inner tabs</em> to perform several kinds of activities</li>
+<li><strong>6) Inner Tab Content</strong>: The content of a <em>inner tab</em> can be an <em>editor</em> or several kinds of forms</li>
+<li><strong>7) Inner Tab Actions and Results</strong>: If the <em>inner tab</em> hosts and <em>editor</em>, you may see different actions and results</li>
+</ul>
+<h2 id="connection-outer-tab">Connection Outer Tab</h2>
+<p>Notice the little tab with a cross besides the <em>Snippet Outer Tab</em>. This allows you to create a new outer tab that will automatically be a <em>Connection Outer Tab</em>. However, the <em>Snippet Outer Tab</em> is fixed and will always be the first.</p>
+<p>Now create a new <em>Connection Outer Tab</em>.</p>
+<div class="figure">
+<img src="../img/05_workspace_03.png" alt="Connection outer tab" />
+<p class="caption">Connection outer tab</p>
+</div>
+<p>A new <em>Connection Outer Tab</em> will always automatically point to the first connection on your list of database connections. Observe the elements inside of this tab:</p>
+<div class="figure">
+<img src="../img/05_workspace_04.png" alt="Sections of the Connection outer tab" />
+<p class="caption">Sections of the Connection outer tab</p>
+</div>
+<ul>
+<li><strong>1) Connection Selector</strong>: Shows all connections and lets the user select the current one</li>
+<li><strong>2) Tree of Structures</strong>: Displays a hierarchical tree where you can navigate through the database elements</li>
+<li><strong>3) Inner Tabs</strong>: Allows the user to execute actions in the current database. There are several kinds of inner tabs for the current database. By clicking on the last small tab with a cross, you can add a new tab. A new tab always will be a <em>Query Tab</em>, where you can write any kind of SQL statement</li>
+<li><strong>4) Inner Tab Content</strong>: Can vary depending on the kind of inner tab. The figure shows a <em>Query Tab</em> and in this case the content will be an <em>SQL Editor</em>, with syntax highlight and autocomplete</li>
+<li><strong>5) Inner Tab Actions</strong>: Can vary depending on the kind of inner tab. For a <em>Query Tab</em>, they are <em>Execute Button</em>, <em>Format Button</em> and <em>Editor Mode</em> (script, execute or query)</li>
+<li><strong>6) Inner Tab Results</strong>: A <em>Query Tab</em> in query mode, after you click in the <em>Execute Button</em> or type the execute shortcut (<code>Alt-Q</code>), will show a grid with the query results. All modes will show error messages, if any.</li>
+</ul>
+<h2 id="working-with-databases">Working with databases</h2>
+<p>Take a look at your connections selector. OmniDB always points to the first available connection but you can change it by clicking on the selector.</p>
+<div class="figure">
+<img src="../img/05_workspace_05.png" alt="Changing current Connection" />
+<p class="caption">Changing current Connection</p>
+</div>
+<p>Select the <em>DellStore</em> connection. Now go to the tree right below the selector and click to expand the node <em>Schemas</em>.</p>
+<div class="figure">
+<img src="../img/05_workspace_06.png" alt="Password expired" />
+<p class="caption">Password expired</p>
+</div>
+<p>Bear in mind that every 10 minutes you keep without performing actions on the database, will trigger a <em>Password Expired</em> popup. As explained before, this is important for your database security. After you type the correct password, you will see all schemas in your database (in case of PostgreSQL, <code>TOAST</code> and temp schemas are not shown).</p>
+<div class="figure">
+<img src="../img/05_workspace_07.png" alt="Schemas" />
+<p class="caption">Schemas</p>
+</div>
+<p>Now click to expand the schema <code>public</code>. You will see different kinds of elements contained in this schema.</p>
+<div class="figure">
+<img src="../img/05_workspace_08.png" alt="Schema public" />
+<p class="caption">Schema public</p>
+</div>
+<p>Now click to expand the node <em>Tables</em>, and you will see all tables contained in the schema <code>public</code>. Expand any table and you will see its columns, primary key, foreign keys, unique constraints and indexes. Each column is also expansible, displaying data type and nullable constraint.</p>
+<div class="figure">
+<img src="../img/05_workspace_09.png" alt="Tables" />
+<p class="caption">Tables</p>
+</div>
+<p>In order to view records inside a table, right click it and choose <em>Data Actions &gt; Query Data</em>.</p>
+<div class="figure">
+<img src="../img/05_workspace_10.png" alt="Query Data context menu" />
+<p class="caption">Query Data context menu</p>
+</div>
+<p>Notice that OmniDB fills the current SQL editor with a simple query to list table records. The records are displayed in a grid right below the editor. This grid can be controlled with keyboard as if you were using a spreadsheet manager. You can also copy data from single cells or block of cells (that can be selected with the keyboard or mouse) and paste on any spreadsheet manager.</p>
+<div class="figure">
+<img src="../img/05_workspace_11.png" alt="Query Data" />
+<p class="caption">Query Data</p>
+</div>
+<p>You can edit the query on the SQL editor, writing simple or more complex queries and clicking on the action button. You can control how many records should be displayed (10, 100, 1000 or all rows). More details in the next chapters.</p>
+<h2 id="working-with-multiple-tabs-inside-the-same-connection">Working with multiple tabs inside the same connection</h2>
+<p>Inside a single connection, you can create several inner tabs by clicking on the last little tab with a cross. Each new inner tab will be a <em>Query Tab</em>.</p>
+<div class="figure">
+<img src="../img/05_workspace_12.png" alt="Several inner tabs" />
+<p class="caption">Several inner tabs</p>
+</div>
+<div class="figure">
+<img src="../img/05_workspace_13.png" alt="Several inner tabs" />
+<p class="caption">Several inner tabs</p>
+</div>
