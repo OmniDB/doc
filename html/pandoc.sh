@@ -1,5 +1,5 @@
 #!/bin/bash
 
-version="2_0_1"
+version="2_0_3"
 
-pandoc -N -s -o "omnidb_$version.html" ../src/*.md
+pandoc -N -s -fmarkdown-implicit_figures -o "omnidb_$version.html" ../src/*.md

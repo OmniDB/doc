@@ -20,9 +20,11 @@ following main differences from the C# version:
 - Support to HTTPS;
 - It allows query execution in background and cancellation through the use of
 websockets;
+- There is a new Snippet feature;
+- Log capabilities and a test suite are almost finished;
 - Initially, only an improved support of PostgreSQL is implemented. More RDBMS
 support coming soon;
-- There is a new Snippet feature;
-- Log capabilities and a test suite are being developed;
+- Database conversion feature was disabled by now, but it will be re-enabled
+soon;
 - You don't need to install dependencies and web servers any more. Everything
-OmniDB needs is now bundled in a single executable.
+OmniDB needs is now bundled together.
