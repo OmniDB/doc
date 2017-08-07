@@ -1,0 +1,32 @@
+<h1 id="table-management">Table Management</h1>
+<h2 id="creating-tables">Creating tables</h2>
+<p>OmniDB has a table creation interface that lets you configure columns, constraints and indexes. A couple of observations should be mentioned:</p>
+<ul>
+<li>Most DBMS automatically create indexes when primary keys and unique constraints are created. Because of that, the indexes tab is only available after creating the table.</li>
+<li>Each DBMS has its unique characteristics and limitations regarding table creation and the OmniDB interface reflects these limitations. For instance, SQLite does not allow us to change existing columns and constraints. Because of that, the interface lets us change only table name and add new columns when dealing with SQLite databases (it is still not the case in OmniDB Python version, as it currently supports only PostgreSQL databases).</li>
+</ul>
+<p>We will create example tables (<em>Customer</em> and <em>Address</em>) in the <code>testdb</code> database we connected to earlier. Right click on the <strong>Tables</strong> node and select the <strong>New Table</strong> action:</p>
+<p><img src="../img/06_table_management_01.png" /></p>
+<p>We will create the table <em>Customer</em> with a primary key that will be referenced by the table <em>Address</em>:</p>
+<p><img src="../img/06_table_management_02.png" /></p>
+<p><img src="../img/06_table_management_03.png" /></p>
+<p>Note how the table appers in the <em>Tables</em> tree node:</p>
+<p><img src="../img/06_table_management_04.png" /></p>
+<p>Now create the table <em>Address</em> with a primary key and a foreign key:</p>
+<p><img src="../img/06_table_management_05.png" /></p>
+<p><img src="../img/06_table_management_06.png" /></p>
+<p>At this point we have two tables in schema <code>public</code>. The schema structure can be seen with the graph feature by right clicking on the schema <code>public</code> node of the tree and selecting <em>Render Graph &gt; Simple Graph</em>:</p>
+<p><img src="../img/06_table_management_07.png" /></p>
+<p><img src="../img/06_table_management_08.png" /></p>
+<p>And this is what the <em>Complete Graph</em> looks like:</p>
+<p><img src="../img/06_table_management_09.png" /></p>
+<h2 id="editing-tables">Editing tables</h2>
+<p>OmniDB also lets you edit existing tables (always following DBMS limitations). To test this feature we will add a new column to the table <em>Customer</em>. To access the alter table interface just right click the table node and select the action <em>Table Actions &gt; Alter Table</em>:</p>
+<p><img src="../img/06_table_management_10.png" /></p>
+<p>Add the column <em>cust_age</em> and save:</p>
+<p><img src="../img/06_table_management_11.png" /></p>
+<p>The interface is capable of detecting errors that may occur during alter table operations, showing the command and the error that occurred. To demonstrate it we will try to add the column <em>cust_name</em>, which already belongs to this table:</p>
+<p><img src="../img/06_table_management_12.png" /></p>
+<h2 id="removing-tables">Removing tables</h2>
+<p>In order to remove a table just right click the table node and select the action <em>Table Actions &gt; Drop Table</em>:</p>
+<p><img src="../img/06_table_management_13.png" /></p>
