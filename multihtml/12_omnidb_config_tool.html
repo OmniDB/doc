@@ -1,0 +1,47 @@
+<h1 id="omnidb-config-tool">OmniDB Config Tool</h1>
+<p>Every installation of OmniDB also comes with a small CLI utility called <em>OmniDB Config</em>. It will have a different file name, depending on the way you installed OmniDB:</p>
+<ul>
+<li>If you are using a tarball or zip package, it is called <strong>omnidb-config</strong>, for both server and app versions;</li>
+<li>If you used an installer (like the .deb file) of server version, it is called <strong>omnidb-config-server</strong>;</li>
+<li>If you used an installer of app version, it is called <strong>omnidb-config-app</strong>.</li>
+</ul>
+<p>Despite having different names, the utility does exactly the same. If you used an installer, it will be put in your <code>$PATH</code>.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">user@machine</span>:~$  omnidb-config-app --help
+<span class="ex">Usage</span>: omnidb-config-app [options]
+
+<span class="ex">Options</span>:
+  <span class="ex">--version</span>             show program<span class="dt">\&#39;</span>s version number and exit
+  <span class="ex">-h</span>, --help            show this help message and exit
+  <span class="ex">-c</span> username password, --createsuperuser=username password
+                        <span class="ex">create</span> super user: -c username password
+  <span class="ex">-a</span>, --vacuum          databases maintenance
+  <span class="ex">-r</span>, --resetdatabase   reset databases</code></pre></div>
+<h2 id="create-super-user">Create super user</h2>
+<p>Option <code>-c</code> allows you to create a new super user, without needing to open OmniDB interface.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">user@machine</span>:~$ omnidb-config-app -c william password
+<span class="ex">Creating</span> superuser...
+<span class="ex">Superuser</span> created.</code></pre></div>
+<h2 id="vacuum">Vacuum</h2>
+<p>OmniDB has two databases:</p>
+<ul>
+<li><code>omnidb.db</code>: Stores all users and connections, and other OmniDB related stuff;</li>
+<li><em>Sessions database</em>: Stores Django user sessions.</li>
+</ul>
+<p>Both databases are SQLite, so it can be useful to vacuum them sometimes to reduce file size. This can be done with the <code>-a</code> option.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">user@machine</span>:~$ omnidb-config-app -a
+<span class="ex">Vacuuming</span> OmniDB database...
+<span class="ex">Done.</span>
+<span class="ex">Vacuuming</span> Sessions database...
+<span class="ex">Done.</span></code></pre></div>
+<h2 id="reset-database">Reset database</h2>
+<p>If you wish to wipe out all OmniDB information and get a clean database as it was just installed, you can use the <code>-r</code> option. Use it with caution!</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">user@machine</span>:~$ omnidb-config-app -r
+<span class="ex">***</span> ATENTION *** ALL USERS DATA WILL BE LOST
+<span class="ex">Would</span> you like to continue? (y/n) <span class="ex">y</span>
+<span class="ex">Cleaning</span> users...
+<span class="ex">Done.</span>
+<span class="ex">Cleaning</span> sessions...
+<span class="ex">Vacuuming</span> OmniDB database...
+<span class="ex">Done.</span>
+<span class="ex">Vacuuming</span> Sessions database...
+<span class="ex">Done.</span></code></pre></div>
