@@ -1,0 +1,28 @@
+<h1 id="gerenciamento-de-tabela">Gerenciamento de tabela</h1>
+<h2 id="criando-tabelas">Criando tabelas</h2>
+<p>OmniDB possui uma interface de criação de tabelas que permite configurar colunas, restrições (constraints) e índices. Algumas observações devem ser mencionadas: - A maioria dos SGBDs cria automaticamente índices quando as chaves primárias e exclusivas são criadas. Por isso, a guia de índices só está disponível depois de criar a tabela. - Cada SGBD tem suas características e limitações únicas na criação de tabelas e a interface OmniDB reflete essas limitações. Por exemplo, o SQLite não nos permite alterar as colunas existentes e restrições (constraints). Por isso, a interface nos permite mudar apenas o nome da tabela e adicionar novas colunas ao lidar com bancos de dados SQLite (este ainda não é o caso da versão OmniDB Python, pois atualmente suporta apenas banco de dados PostgreSQL).</p>
+<p>Vamos criar tabelas de exemplo (<em>Customer</em> e <em>Address</em>) no banco de dados <code>testdb</code> que conectamos anteriormente. Clique com o botão direito do mouse no nó <strong>Tables</strong> e selecione <strong>New Table</strong>:</p>
+<p><img src="../img/06_table_management_01.png" /></p>
+<p>Vamos criar a tabela <em>Customer</em> com uma chave primária que será referenciada pela Tabela <em>Address</em>:</p>
+<p><img src="../img/06_table_management_02.png" /></p>
+<p><img src="../img/06_table_management_03.png" /></p>
+<p>Observe como a tabela aparece no nó <em>Tables</em> da árvore:</p>
+<p><img src="../img/06_table_management_04.png" /></p>
+<p>Agora, crie a tabela <em>Address</em> com uma chave primária e uma chave estrangeira.</p>
+<p><img src="../img/06_table_management_05.png" /></p>
+<p><img src="../img/06_table_management_06.png" /></p>
+<p>Neste ponto, temos duas tabelas no schema <code>public</code>. A estrutura do schema pode ser vista com o recurso de gráfico clicando com o botão direito no schema <code>public</code> da árvore e selecionando <em>Render Graph &gt; Simple Graph</em>: At this point we have two tables in schema <code>public</code>. The schema structure can be seen with the graph feature by right clicking on the schema <code>public</code> node of the tree and selecting <em>Render Graph &gt; Simple Graph</em>:</p>
+<p><img src="../img/06_table_management_07.png" /></p>
+<p><img src="../img/06_table_management_08.png" /></p>
+<p>E é assim que o <em>Complete Graph</em> exibe:</p>
+<p><img src="../img/06_table_management_09.png" /></p>
+<h2 id="editando-tabelas">Editando tabelas</h2>
+<p>O OmniDB também permite que você edite tabelas existentes (sempre seguindo as limitações do SGBD). Para testar este recurso, adicionaremos uma nova coluna à tabela <em>Customer</em>. Para acessar a interface alter table apenas clique com o botão direito do mouse no nó da tabela e selecione <em>Table Actions &gt; Alter Table</em>:</p>
+<p><img src="../img/06_table_management_10.png" /></p>
+<p>Adicione a coluna <em>cust_age</em> e salve:</p>
+<p><img src="../img/06_table_management_11.png" /></p>
+<p>A interface é capaz de detectar erros que podem ocorrer durante as operações Alter Table, mostrando o comando e o erro que ocorreu. Para demonstrar tentaremos adicionar a coluna <em>cust_name</em>, que já pertence a esta tabela:</p>
+<p><img src="../img/06_table_management_12.png" /></p>
+<h2 id="removendo-tabelas">Removendo tabelas</h2>
+<p>Para remover uma tabela, clique com o botão direito do mouse no nó da tabela e selecione <em>Table Actions &gt; Drop Table</em>:</p>
+<p><img src="../img/06_table_management_13.png" /></p>

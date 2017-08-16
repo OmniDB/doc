@@ -1,0 +1,39 @@
+<h1 id="instalação">Instalação</h1>
+<p>OmniDB fornece 2 tipos de pacotes para atender a todas as necessidades dos usuários:</p>
+<ul>
+<li><strong>OmniDB Application</strong>: Executa um servidor web em uma porta aleatória para trás, e fornece uma janela simplificada do servidor web para usar a interface OmniDB sem qualquer configuração adicional. Funciona como uma aplicação de desktop.</li>
+<li><strong>OmniDB Server</strong>: executa um servidor web em uma porta aleatória. O usuário necessita de um navegador Web para se conectar. Fornece gerenciamento de usuários e é ideal para ser hospedado em um servidor na rede dos usuários.</li>
+</ul>
+<p>Tanto o OmniDB Application quanto o OmniDB Server podem ser instalados na mesma máquina.</p>
+<h2 id="omnidb-application">OmniDB Application</h2>
+<p>Para executar o aplicativo OmniDB, você não precisa instalar nenhuma peça adicional de software. Basta dirigir-se a <a href="omnidb.org" class="uri">omnidb.org</a> e baixar o pacote mais recente para seu sistema operacional específico e arquitetura:</p>
+<pre><code>• Linux 32 bits / 64 bits
+    - instalador DEB
+    - instalador RPM
+    - Tarball
+
+• Windows 32 bits / 64 bits
+    - instalador EXE
+    - pacote ZIP
+
+• Mac OS X
+    - Instalador DMG
+    - pacote ZIP</code></pre>
+<p>Se você escolhe pacotes tarball ou zip, basta extraí-lo em algum lugar do seu computador. Entre na pasta criada e abra o executável do <code>omnidb-app</code>. Ele abrirá OmniDB dentro de sua própria janela.</p>
+<p>Com o instalador, você pode instalar o OmniDB no seu sistema, e estará disponível através do menu do seu aplicativo de ambiente de trabalho. Quando você abri-lo o OmniDB abrirá sua própria janela.</p>
+<p><img src="../img/03_installation_01.png" /></p>
+<h2 id="omnidb-server">OmniDB Server</h2>
+<p>Como o OmniDB app, o OmniDB Server não requer nenhuma peça adicional de software e as mesmas opções para sistema operacional e arquitetura são fornecidas. Se você escolher o tarball ou o pacote zip, extraia-o em algum lugar do seu computador. Entre na pasta descompactada e abra o executável <code>omniDB-server</code>.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">User@machine</span>:~$ cd omnidb-server
+<span class="ex">User@machine</span>:~ / omnidb-server$ ./omnidb
+<span class="ex">Iniciando</span> o OmniDB 2.0.2 em http://localhost: 8000
+<span class="ex">Abra</span> OmniDB no seu navegador favorito
+<span class="ex">Pressione</span> Ctrl + C para sair</code></pre></div>
+<p>Para instalar o OmniDB Server, você precisará de privilégios de administrador:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">User@machine</span>:~ $ sudo omnidb-server
+<span class="ex">Iniciando</span> o OmniDB 2.0.2 em http: // localhost: 8000
+<span class="ex">Abra</span> OmniDB no seu navegador favorito
+<span class="ex">Pressione</span> Ctrl + C para sair</code></pre></div>
+<p>Agora que o servidor web está em execução, você pode acessar o aplicativo da web OmniDB em seu navegador favorito. Digite na barra de endereços: <code>localhost: 8000</code> e tecle <code>Enter</code>. Se tudo correu bem, você verá uma página como esta:</p>
+<p><img src="../img/03_installation_02.png" /></p>
+<p>Agora você sabe que o OmniDB está funcionando corretamente. Nos próximos capítulos, nós veremos como fazer o login pela primeira vez, como criar um usuário e utilizar OmniDB.</p>
