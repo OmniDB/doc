@@ -1,0 +1,48 @@
+<h1 id="workspace">Workspace</h1>
+<p>Depois de criar pelo menos uma conexão, o usuário pode entrar no <em>Workspace</em>, seja clicando na guia <em>Workspace</em> ou clicando na ação <em>Select Connection</em> na grade de conexões.</p>
+<p><img src="../img/05_workspace_01.png" /></p>
+<h2 id="seções-da-janela-workspace">Seções da janela <em>Workspace</em></h2>
+<p>Esta interface possui vários elementos:</p>
+<p><img src="../img/05_workspace_02.png" /></p>
+<ul>
+<li><strong>1) Links</strong>: permite ao usuário navegar entre as janelas do OmniDB</li>
+<li><strong>2) Abas Externas</strong>: OmniDB permite que você trabalhe com vários bancos de dados ao mesmo tempo. Cada banco de dados será acessível através de uma aba externa. As abas externas também podem conter recursos diversos, como o recurso <em>Snippets</em></li>
+<li><strong>3) Opções</strong>: mostra o usuário atual logado, e também links para <em>user settings</em>, <em>query history</em>, <em>information</em> e <em>logout</em>.</li>
+</ul>
+<h2 id="aba-externa-de-conexão">Aba Externa de Conexão</h2>
+<p>Então, a aba externa chamada <em>Test</em> tem esse nome por causa do alias que colocamos na conexão ao <code>testdb</code>. Esta aba é uma <em>aba de conexão externa</em>. Observe a pequena aba com uma cruz além da aba <em>Test</em>. Ela permite que você crie uma nova aba externa que será automaticamente uma <em>aba externa de conexão</em>. No entanto, a <em>aba externa Snippet</em> é fixa e sempre será a primeira. Uma nova <em>aba externa de conexão</em> sempre apontará automaticamente para a primeira conexão em sua lista de conexões de banco de dados. Ou, se você clicar no <em>Selection Connection</em>, ela apontará para a conexão selecionada. Observe os elementos dentro desta guia:</p>
+<p><img src="../img/05_workspace_04.png" /></p>
+<ul>
+<li><strong>1) Seletor de conexão</strong>: mostra todas as conexões e permite ao usuário selecionar a atual</li>
+<li><strong>2) Árvore de estruturas</strong>: exibe uma árvore hierárquica onde você pode navegar pelos elementos do banco de dados</li>
+<li><strong>3) Abas Internas</strong>: Permite que o usuário execute ações na corrente base de dados. Existem vários tipos de abas internas para o banco de dados atual. Ao clicar na última aba com uma cruz, você pode adicionar uma nova aba. Uma nova aba sempre será uma <em>aba de consulta</em>, onde você pode escrever qualquer tipo de declaração SQL</li>
+<li><strong>4) Conteúdo da aba interna</strong>: pode variar de acordo com o tipo de aba interna. A figura mostra uma <em>aba de consulta</em> e, neste caso, o conteúdo será um <em>Editor de SQL</em>, com destaque de sintaxe e preenchimento automático</li>
+<li><strong>5) Ações da aba interna</strong>: pode variar dependendo do tipo de aba interna. Para uma <em>aba de consulta</em>, eles são: <em>Execute Button</em>, <em>Format Button</em> e <em>Editor Mode</em> (script, executar ou consulta)</li>
+<li><strong>6) Resultados da aba interna</strong>: uma <em>aba de consulta</em> no modo de consulta, depois de clicar no botão <em>Execute</em> ou digitar o atalho de execução (<code>Alt-Q</code>), mostrará uma grade com os resultados da consulta. Todos os modos mostrarão mensagens de erro, se houver.</li>
+</ul>
+<h2 id="trabalhando-com-banco-de-dados">Trabalhando com banco de dados</h2>
+<p>Dê uma olhada em seu seletor de conexões. OmniDB sempre aponta para a primeira conexão disponível, mas você pode alterá-lo clicando no seletor.</p>
+<p><img src="../img/05_workspace_05.png" /></p>
+<p>Selecione a conexão <em>DellStore</em>. Agora vá para a árvore logo abaixo do seletor e clique para expandir o nó <em>Schemas</em>.</p>
+<p><img src="../img/05_workspace_06.png" /></p>
+<p>Tenha em mente que a cada 10 minutos sem executar ações no banco de dados, irá ativar um pop-up <em>Password Expired</em>. Como explicado anteriormente, isso é importante para a segurança do seu banco de dados. Depois de digitar a senha correta, você verá todos os schemas no seu banco de dados (no caso do PostgreSQL, TOAST e temp schemas não são mostrados).</p>
+<p><img src="../img/05_workspace_07.png" /></p>
+<p>Agora, clique para expandir o schema <code>public</code>. Você verá diferentes tipos de elementos contidos neste schema.</p>
+<p><img src="../img/05_workspace_08.png" /></p>
+<p>Agora clique para expandir o nó <em>Tables</em>, e você verá todas as tabelas contidas no schema <code>public</code>. Expanda qualquer tabela e você verá suas colunas, chave primária, chaves estrangeiras, restrições e índices únicos. Cada coluna é também expansível, apresentando tipo de dados e restrição anulável.</p>
+<p><img src="../img/05_workspace_09.png" /></p>
+<p>Para ver registros dentro de uma tabela, clique com o botão direito e escolha <em>Data Actions &gt; Query Data</em>.</p>
+<p><img src="../img/05_workspace_10.png" /></p>
+<p>Observe que o OmniDB preenche o editor atual do SQL com uma consulta simples para listar os registros da tabela. Os registros são exibidos em uma grade logo abaixo do editor. Esta grade pode ser controlada com o teclado como se estivesse usando uma planilha. Você também pode copiar dados de células únicas ou blocos de células (que pode ser selecionado com o teclado ou mouse) e colar em qualquer planilha.</p>
+<p><img src="../img/05_workspace_11.png" /></p>
+<p>Você pode editar a consulta no editor do SQL, escrevendo simples ou complexas consultas e executá-las clicando no botão action. Você pode controlar quantos registros devem ser exibidos (10, 100, 1000 ou todas as linhas). Mais detalhes nos próximos capítulos.</p>
+<h2 id="trabalhando-com-abas-múltiplas-dentro-da-mesma-conexão">Trabalhando com abas múltiplas dentro da mesma conexão</h2>
+<p>Dentro de uma única conexão, você pode criar várias abas internas clicando na última aba com uma cruz. Cada nova aba interna será uma <em>aba de consulta</em>.</p>
+<p><img src="../img/05_workspace_12.png" /></p>
+<p>No OmniDB, você pode executar várias instruções SQL e procedimentos em paralelo. Quando está sendo executado, um ícone será mostrado na aba para indicar o estado atual. Se algum processo estiver concluído e não estiver na aba atual, essa aba mostrará um ícone verde para indicar que a rotina que está sendo executada agora terminou.</p>
+<p><img src="../img/05_workspace_13.png" /></p>
+<p>Ao clicar no botão <em>Cancel</em>, você pode cancelar um processo que está sendo executado dentro do banco de dados.</p>
+<p><img src="../img/05_workspace_14.png" /></p>
+<p>Você também pode arrastar e soltar uma guia para alterar sua ordem. Isso funciona com as abas internas e externas.</p>
+<p><img src="../img/05_workspace_15.png" /></p>
+<p>Além disso, você pode usar atalhos de teclado para gerenciar abas internas (Consulta SQL) e abas externas (Conexão): - <strong>Ctrl-Insert</strong>: Insere uma nova aba interna - <strong>Ctrl-Delete</strong>: remove uma aba interna - <strong>Ctrl- &lt;</strong>: Muda o foco para a aba interna à esquerda - <strong>Ctrl- &gt;</strong>: Muda o foco para a aba interna à direita - <strong>Ctrl-Shift-Insert</strong>: Insere uma nova aba externa - <strong>Ctrl-Shift-Delete</strong>: remove uma aba externa - <strong>Ctrl-Shift- &lt;</strong>: Muda o foco para a aba externa à esquerda - <strong>Ctrl-Shift- &gt;</strong>: Muda o foco para a aba externa à direita</p>
