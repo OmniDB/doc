@@ -1,4 +1,4 @@
-# SQL Editor
+# Writing SQL Queries
 
 The tool comes with a tab system where each tab contains a SQL editor, an action
 button, an indent button, a field to select the type of command and a space to

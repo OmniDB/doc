@@ -49,8 +49,13 @@ Get inside the uncompressed folder and run the `omnidb-server` executable.
 
 ```bash
 user@machine:~$ cd omnidb-server
-user@machine:~/omnidb-server$ ./omnidb
-Starting OmniDB 2.0.2 at http://localhost:8000
+user@machine:~$ ./omnidb-server
+Starting OmniDB websocket...
+Checking port availability...
+Starting websocket server at port 25482.
+Starting OmniDB server...
+Checking port availability...
+Starting server OmniDB 2.0.3 at http://localhost:8000.
 Open OmniDB in your favorite browser
 Press Ctrl+C to exit
 ```
@@ -60,7 +65,30 @@ administrator privileges:
 
 ```bash
 user@machine:~$ sudo omnidb-server
-Starting OmniDB 2.0.2 at http://localhost:8000
+Starting OmniDB websocket...
+Checking port availability...
+Starting websocket server at port 25482.
+Starting OmniDB server...
+Checking port availability...
+Starting server OmniDB 2.0.3 at http://localhost:8000.
+Open OmniDB in your favorite browser
+Press Ctrl+C to exit
+```
+
+Note how OmniDB starts a *websocket server* in a random port (in the above
+example it started in port 25482) and a *web server* in port 8000. You can even
+start multiple instances of omnidb-server, and it will start using different
+ports to avoid conflict. You can also specify websocket server and web server
+ports:
+
+```bash
+user@machine:~$ sudo omnidb-server -p 8080 -w 2000
+Starting OmniDB websocket...
+Checking port availability...
+Starting websocket server at port 2000.
+Starting OmniDB server...
+Checking port availability...
+Starting server OmniDB 2.0.3 at http://localhost:8080.
 Open OmniDB in your favorite browser
 Press Ctrl+C to exit
 ```

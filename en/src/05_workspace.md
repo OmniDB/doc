@@ -1,4 +1,4 @@
-# Workspace
+# Managing Databases
 
 After creating at least one connection the user can enter the *Workspace*,
 either by clicking the *Workspace* tab or by clicking in the *Select Connection*
