@@ -1,8 +1,9 @@
-# Graph with Tables and Relations
+# Visualizing Data
 
-This feature displays a graph with nodes representing tables and edges
-representing table relationships with foreign keys. Using the mouse, the user is
-able to zoom in, zoom out, and drag and drop nodes to change its position.
+OmniDB provides a feature to display a graph with nodes representing tables and
+edges representing table relationships with foreign keys. Using the mouse, the
+user is able to zoom in, zoom out, and drag and drop nodes to change its
+position.
 
 There are two types of graphs: *Simple Graph* and *Complete Graph*.
 

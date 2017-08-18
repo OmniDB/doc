@@ -1,4 +1,4 @@
-# Table Management
+# Creating, Changing and Removing Tables
 
 ## Creating tables
 
