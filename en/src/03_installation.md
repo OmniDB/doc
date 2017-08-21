@@ -93,8 +93,8 @@ Open OmniDB in your favorite browser
 Press Ctrl+C to exit
 ```
 
-Now that the web server is running, you may access OmniDB web app on your
-favorite browser. Type in address bar: `localhost:8000` and hit `Enter`. If
+Now that the web server is running, you may access OmniDB browser-based app on
+your favorite browser. Type in address bar: `localhost:8000` and hit `Enter`. If
 everything went fine, you shall see a page like this:
 
 ![](../img/03_installation_02.png)
