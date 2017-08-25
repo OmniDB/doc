@@ -22,3 +22,4 @@ O objetivo principal do OmniDB é oferecer um espaço de trabalho unificado com 
 Apesar disso, o OmniDB foi construído com a simplicidade em mente, projetado para ser uma aplicação web leve e veloz. OmniDB também é alimentado pelo WebSocket Technology, permitindo ao usuário executar múltiplas consultas e procedimentos em vários bancos de dados, em vários hosts, em segundo plano.
 
 OmniDB também é seguro. Todos os dados do usuário OmniDB são armazenados criptografados e não salva a senha onde o banco de dados está armazenado. Quando o usuário se conecta pela primeira vez a um banco de dados, OmniDB solicita a senha. Esta senha é criptografada e armazenada em memória por um período específico de tempo. Quando esse prazo expirar, OmniDB pergunta novamente a senha. Isso garante a máxima segurança para o banco de dados que o OmniDB está se conectando.
+

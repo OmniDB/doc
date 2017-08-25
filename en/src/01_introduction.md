@@ -1,18 +1,18 @@
 # Introduction
 
-**OmniDB** is an open source web app designed to access and manage many
-different Database Management systems, e.g. PostgreSQL, Oracle and MySQL. OmniDB
-can run either as an App or via Browser, combining the flexibility needed for
-various access paths with a design that puts security first. OmniDB is actively
-developed, automatically tested on a variety of databases and browsers and
-comes with full documentation.
+**OmniDB** is an open source browser-based app designed to access and manage
+many different Database Management systems, e.g. PostgreSQL, Oracle and MySQL.
+OmniDB can run either as an App or via Browser, combining the flexibility needed
+for various access paths with a design that puts security first. OmniDB is
+actively developed, automatically tested on a variety of databases and browsers
+and comes with full documentation.
 
-Since early development, OmniDB was designed as an web app. Consequently, it
-runs in any browser, from any operational system. It can be accessed by several
-computers and multiple users, each one of them with his/her own group of
-connections. It also can be hosted in any operational system, without the need
-of install any dependencies. We will see further details on installation in the
-next chapters.
+Since early development, OmniDB was designed as an browser-based app.
+Consequently, it runs in any browser, from any operational system. It can be
+accessed by several computers and multiple users, each one of them with his/her
+own group of connections. It also can be hosted in any operational system,
+without the need of install any dependencies. We will see further details on
+installation in the next chapters.
 
 OmniDB’s main objective is to offer an unified workspace with all
 functionalities needed to manipulate different DMBS. DBMS specific tools aren’t
@@ -22,9 +22,9 @@ sensation is that there is no difference when he/she manipulates different DBMS,
 it just feels like different connections.
 
 Despite this, OmniDB is built with simplicity in mind, designed to be a fast and
-lightweight web application. OmniDB is also powered by the WebSocket technology,
-allowing the user to execute multiple queries and procedures in multiple
-databases in multiple hosts in background.
+lightweight browser-based application. OmniDB is also powered by the WebSocket
+technology, allowing the user to execute multiple queries and procedures in
+multiple databases in multiple hosts in background.
 
 OmniDB is also secure. All OmniDB user data are stored encrypted, and no
 database password is stored at all. When the user first connects to a database,
