@@ -1,4 +1,4 @@
-# OmniDB Config Tool
+# 11. OmniDB Config Tool
 
 Every installation of OmniDB also comes with a small CLI utility called *OmniDB
 Config*. It will have a different file name, depending on the way you installed

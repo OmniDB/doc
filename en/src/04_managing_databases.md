@@ -1,16 +1,16 @@
-# Managing Databases
+# 4. Managing Databases
 
 After creating at least one connection the user can enter the *Workspace*,
 either by clicking the *Workspace* tab or by clicking in the *Select Connection*
 action in the connections grid.
 
-![](../img/05_workspace_01.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_014.png)
 
 ## Sections of the *Workspace* window
 
 This interface has several elements:
 
-![](../img/05_workspace_02.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_015.png)
 
 - **1) Links**: Enables the user to navigate between OmniDB windows
 - **2) Outer Tabs**: OmniDB lets you work with several databases at the same
@@ -32,7 +32,7 @@ connection on your list of database connections. Or, if you clicked on the
 *Select Connection* action, it will point to the selected connection. Observe
 the elements inside of this tab:
 
-![](../img/05_workspace_04.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_016.png)
 
 - **1) Connection Selector**: Shows all connections and lets the user select the
 current one
@@ -57,12 +57,12 @@ the query results. All modes will show error messages, if any.
 Take a look at your connections selector. OmniDB always points to the first
 available connection but you can change it by clicking on the selector.
 
-![](../img/05_workspace_05.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_017.png)
 
 Select the *DellStore* connection. Now go to the tree right below the selector
 and click to expand the node *Schemas*.
 
-![](../img/05_workspace_06.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_018.png)
 
 Bear in mind that every 10 minutes you keep without performing actions on the
 database, will trigger a *Password Expired* popup. As explained before, this is
@@ -70,24 +70,24 @@ important for your database security. After you type the correct password, you
 will see all schemas in your database (in case of PostgreSQL, `TOAST` and temp
 schemas are not shown).
 
-![](../img/05_workspace_07.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_019.png)
 
 Now click to expand the schema `public`. You will see different kinds of
 elements contained in this schema.
 
-![](../img/05_workspace_08.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_020.png)
 
 Now click to expand the node *Tables*, and you will see all tables contained in
 the schema `public`. Expand any table and you will see its columns, primary key,
 foreign keys, unique constraints and indexes. Each column is also expansible,
 displaying data type and nullable constraint.
 
-![](../img/05_workspace_09.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_021.png)
 
 In order to view records inside a table, right click it and choose *Data Actions
 > Query Data*.
 
-![](../img/05_workspace_10.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_022.png)
 
 Notice that OmniDB fills the current SQL editor with a simple query to list
 table records. The records are displayed in a grid right below the editor. This
@@ -95,7 +95,7 @@ grid can be controlled with keyboard as if you were using a spreadsheet manager.
 You can also copy data from single cells or block of cells (that can be selected
 with the keyboard or mouse) and paste on any spreadsheet manager.
 
-![](../img/05_workspace_11.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_023.png)
 
 You can edit the query on the SQL editor, writing simple or more complex queries
 and clicking on the action button. You can control how many records should be
@@ -106,7 +106,7 @@ displayed (10, 100, 1000 or all rows). More details in the next chapters.
 Inside a single connection, you can create several inner tabs by clicking on the
 last little tab with a cross. Each new inner tab will be a *Query Tab*.
 
-![](../img/05_workspace_12.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_024.png)
 
 On OmniDB, you can execute several SQL statements and procedures in parallel.
 When it is executing, an icon will be shown in the tab to indicate its current
@@ -114,17 +114,17 @@ state. If some process is finished and it is not in the current tab, that tab
 will show a green icon indicating the routine being executed there is now
 finished.
 
-![](../img/05_workspace_13.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_025.png)
 
 By clicking in the *Cancel button*, you can cancel a process running inside the
 database.
 
-![](../img/05_workspace_14.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_026.png)
 
 You can also drag and drop a tab to change its order. This works with both inner
 and outer tabs.
 
-![](../img/05_workspace_15.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_027.png)
 
 Additionally, you can use keyboard shortcuts to manage inner tabs (SQL Query)
 and outer tabs (Connection):

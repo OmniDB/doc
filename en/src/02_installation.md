@@ -1,4 +1,4 @@
-# Installation
+# 2. Installation
 
 OmniDB provides 2 kinds of packages to fit every user needs:
 
@@ -20,23 +20,15 @@ for your specific operating system and architecture:
 - Linux 32 bits / 64 bits
     - DEB installer
     - RPM installer
-    - Tarball
 - Windows 32 bits / 64 bits
     - EXE installer
-    - ZIP package
 - Mac OSX
     - DMG installer
-    - ZIP package
 
-If you choose tarball or zip packages, just extract it somewhere in your
-computer. Get inside the folder it creates and run the `omnidb-app` executable.
-It will open OmniDB inside its own window.
+Use the specific installer for your Operational System and it will be available
+through your desktop environment application menu or via command line with `omnidb-app`.
 
-With the installer you can install OmniDB in your system, and it will be
-available through your desktop environment application menu. When you launch it,
-OmniDB will open its own window.
-
-![](../img/03_installation_01.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_001.png)
 
 
 ## OmniDB Server
@@ -44,24 +36,10 @@ OmniDB will open its own window.
 Like OmniDB app, OmniDB server doesn't require any additional piece of software
 and the same options for operating system and architecture are provided.
 
-If you choose the tarball or zip package, extract it somewhere in your computer.
-Get inside the uncompressed folder and run the `omnidb-server` executable.
+Use the specific installer for your Operational System and it will be available
+through your desktop environment application menu or command line with `omnidb-server`.
 
-```bash
-user@machine:~$ cd omnidb-server
-user@machine:~$ ./omnidb-server
-Starting OmniDB websocket...
-Checking port availability...
-Starting websocket server at port 25482.
-Starting OmniDB server...
-Checking port availability...
-Starting server OmniDB 2.0.3 at http://localhost:8000.
-Open OmniDB in your favorite browser
-Press Ctrl+C to exit
-```
-
-If you installed OmniDB server with some installer option, you will need
-administrator privileges:
+You will need administrator privileges:
 
 ```bash
 user@machine:~$ sudo omnidb-server
@@ -76,13 +54,11 @@ Press Ctrl+C to exit
 ```
 
 Note how OmniDB starts a *websocket server* in a random port (in the above
-example it started in port 25482) and a *web server* in port 8000. You can even
-start multiple instances of omnidb-server, and it will start using different
-ports to avoid conflict. You can also specify websocket server and web server
-ports:
+example it started in port 25482) and a *web server* in port 8000. You can also
+specify websocket server port, web server port and listening address:
 
 ```bash
-user@machine:~$ sudo omnidb-server -p 8080 -w 2000
+user@machine:~$ sudo omnidb-server -p 8080 -w 2000 -H 127.0.0.1
 Starting OmniDB websocket...
 Checking port availability...
 Starting websocket server at port 2000.
@@ -93,11 +69,16 @@ Open OmniDB in your favorite browser
 Press Ctrl+C to exit
 ```
 
+Starting on version 2.1.0, OmniDB-Server comes with a configuration file `omnidb.conf`
+that enables the user to specify parameters such as port and listening address. Also,
+2.1.0 enables us to start the server with SSL, this requires a certificate and is
+configured in the same configuration file.
+
 Now that the web server is running, you may access OmniDB browser-based app on
 your favorite browser. Type in address bar: `localhost:8000` and hit `Enter`. If
 everything went fine, you shall see a page like this:
 
-![](../img/03_installation_02.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_002.png)
 
 Now you know that OmniDB is running correctly. In the next chapters, we will see
 how to login for the first time, how to create an user and to utilize OmniDB.
