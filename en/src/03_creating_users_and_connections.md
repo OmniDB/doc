@@ -77,7 +77,7 @@ is successful you will see a confirmation pop-up.
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_012.png)
 
 But, if you have trouble of any kind connecting to your PostgreSQL database,
-the *Password Expired* popup will remain showing the error OmniDB got.
+the same popup will remain showing the error OmniDB got.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_013.png)
 
