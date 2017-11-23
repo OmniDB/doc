@@ -62,9 +62,14 @@ select them. Go ahead and test one of the connections.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_011.png)
 
-Notice the *Password Expired* pop-up. This is happening because OmniDB does not
-store the database user password on disk. When the user types a password in this
-popup, the password is encrypted and stored in memory.
+Notice a pop-up appears with the message *fe_sendauth: no password supplied*.
+This is happening because OmniDB does not store the database user password on
+disk. Not having any password at hand, OmniDB will try to connect without one,
+thus trying to take advantage of automatic authentication methods that might be
+in place: `trust` method, `.pgpass` file, and so on. As the database server
+replies with an error not allowing the user to connect, then OmniDB understands
+a password is required and asks it to the user. When the user types a password
+in this popup, the password is encrypted and stored in memory.
 
 After you type the password and hit *Enter*, if the connection to the database
 is successful you will see a confirmation pop-up.
@@ -72,7 +77,7 @@ is successful you will see a confirmation pop-up.
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_012.png)
 
 But, if you have trouble of any kind connecting to your PostgreSQL database,
-the *Password Expired* popup will remain showing the error OmniDB got.
+the same popup will remain showing the error OmniDB got.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_013.png)
 
