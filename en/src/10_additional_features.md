@@ -1,4 +1,4 @@
-# Additional Features
+# 10. Additional Features
 
 ## SQL History
 
@@ -6,7 +6,7 @@ Every interaction the user does with every database is logged in OmniDB's *SQL
 History*. To access it you need to click on the clock-like icon on the upper
 right corner. OmniDB will show a pop-up with all actions in a paginated grid.
 
-![](../img/11_additional_features_01.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_063.png)
 
 Each action shows date time it started, the time it ended, the duration, the
 mode, the status and the command. As every grid in OmniDB, you can right click
@@ -27,7 +27,7 @@ them change the syntax highlight color of the editor. They are also categorized
 in light and dark themes. A light theme is the default; a dark theme will change
 the entire interface of OmniDB.
 
-![](../img/11_additional_features_02.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_064.png)
 
 Every change in user settings require that you either:
 
@@ -35,6 +35,6 @@ Every change in user settings require that you either:
 web browser; or
 - Open and close OmniDB, if you are using OmniDB app.
 
-![](../img/11_additional_features_03.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_065.png)
 
-![](../img/11_additional_features_04.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_066.png)

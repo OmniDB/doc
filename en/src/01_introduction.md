@@ -1,4 +1,4 @@
-# Introduction
+# 1. Introduction
 
 **OmniDB** is an open source browser-based app designed to access and manage
 many different Database Management systems, e.g. PostgreSQL, Oracle and MySQL.
