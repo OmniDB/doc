@@ -1,4 +1,4 @@
-# 10. Additional Features
+# Additional Features
 
 ## SQL History
 

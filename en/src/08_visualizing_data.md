@@ -1,4 +1,4 @@
-# 8. Visualizing Data
+# Visualizing Data
 
 This feature displays a graph with nodes representing tables and edges
 representing table relationships with foreign keys. Using the mouse, the user is
