@@ -71,19 +71,16 @@ Starting server OmniDB 2.4.0 at 127.0.0.1:8080.
 Open OmniDB in your favorite browser
 ```
 
-Starting on version 2.1.0, OmniDB server comes with a configuration file
-`omnidb.conf` that enables the user to specify parameters such as port and
-listening address. Also, 2.1.0 enables us to start the server with SSL, this
-requires a certificate and is configured in the same configuration file.
-
 ### OmniDB User Database
 
 Since version 2.4.0, upon initialization both server and app will create a file
-`~/.omnidb/omnidb.db` in the user home directory, if it does not exist. That is
-being done by the message *OmniDB successfully migrated user database from
-version 0.0.0 to version 2.4.0* you saw above. This file is also called **user
-database** and contains user data. If it already exists, then OmniDB will check
-whether the version of the server matches the version of the user database:
+`~/.omnidb/omnidb-app/omnidb.db` (for OmniDB app) or
+`~/.omnidb/omnidb-server/omnidb.db` (for OmniDB server) in the user home
+directory, if it does not exist. That can be confirmed by the message *OmniDB
+successfully migrated user database from version 0.0.0 to version 2.4.0* you saw
+above. This file is also called **user database** and contains user data. If it
+already exists, then OmniDB will check whether the version of the server matches
+the version of the user database:
 
 ```bash
 user@machine:~$ sudo omnidb-server
@@ -117,6 +114,18 @@ Starting server OmniDB 2.5.0 at 0.0.0.0:8000.
 Open OmniDB in your favorite browser
 Press Ctrl+C to exit
 ```
+
+### OmniDB configuration file
+
+Starting on version 2.1.0, OmniDB server comes with a configuration file
+`omnidb.conf` that enables the user to specify parameters such as port and
+listening address. Also, 2.1.0 enables us to start the server with SSL, this
+requires a certificate and is configured in the same configuration file.
+
+Starting on version 2.4.0, this file is located in
+`/.omnidb/omnidb-app/omnidb.db` (for OmniDB app) or
+`~/.omnidb/omnidb-server/omnidb.db` (for OmniDB server) in the user home
+directory.
 
 ### OmniDB in the browser
 

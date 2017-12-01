@@ -152,4 +152,5 @@ whenever you execute them. Even if you close OmniDB window or browser tab, they
 are already stored in OmniDB *User Database*. They will be automatically
 restored when you open OmniDB again (if you are using app), open it in another
 browser window (if you are using server), or even if you clicked in the
-*Connections* window or logged out.
+*Connections* window or logged out. Removing an outer tab or inner tab by the
+interface makes it permanently deleted, so it will not be restored.

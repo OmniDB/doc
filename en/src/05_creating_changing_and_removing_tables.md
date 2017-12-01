@@ -17,7 +17,7 @@ version, as it currently supports only PostgreSQL databases).
 
 We will create example tables (*Customer* and *Address*) in the `testdb`
 database we connected to earlier. Right click on the **Tables** node and select
-the **New Table** action:
+the **Create Table** action:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_028.png)
 
@@ -28,7 +28,8 @@ by the table *Address*:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_030.png)
 
-Note how the table appers in the *Tables* tree node:
+Click on the *Save Changes* button. Right-click the *Tables* tree node and click
+*Refresh*. Note how the table appers in the *Tables* tree node:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_031.png)
 
@@ -38,9 +39,10 @@ Now create the table *Address* with a primary key and a foreign key:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_033.png)
 
-At this point we have two tables in schema `public`. The schema structure can be
-seen with the graph feature by right clicking on the schema `public` node of the
-tree and selecting *Render Graph > Simple Graph*:
+Don't forget to click on the *Save Changes* button when done. At this point we
+have two tables in schema `public`. The schema structure can be seen with the
+graph feature by right clicking on the schema `public` node of the tree and
+selecting *Render Graph > Simple Graph*:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_034.png)
 
