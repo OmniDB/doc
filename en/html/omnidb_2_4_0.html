@@ -54,7 +54,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#omnidb-application"><span class="toc-section-number">2.1</span> OmniDB Application</a></li>
 <li><a href="#omnidb-server"><span class="toc-section-number">2.2</span> OmniDB Server</a><ul>
 <li><a href="#omnidb-user-database"><span class="toc-section-number">2.2.1</span> OmniDB User Database</a></li>
-<li><a href="#omnidb-in-the-browser"><span class="toc-section-number">2.2.2</span> OmniDB in the browser</a></li>
+<li><a href="#omnidb-configuration-file"><span class="toc-section-number">2.2.2</span> OmniDB configuration file</a></li>
+<li><a href="#omnidb-in-the-browser"><span class="toc-section-number">2.2.3</span> OmniDB in the browser</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#creating-users-and-connections"><span class="toc-section-number">3</span> Creating Users and Connections</a><ul>
@@ -160,9 +161,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="ex">Checking</span> port availability...
 <span class="ex">Starting</span> server OmniDB 2.4.0 at 127.0.0.1:8080.
 <span class="ex">Open</span> OmniDB in your favorite browser</code></pre></div>
-<p>Starting on version 2.1.0, OmniDB server comes with a configuration file <code>omnidb.conf</code> that enables the user to specify parameters such as port and listening address. Also, 2.1.0 enables us to start the server with SSL, this requires a certificate and is configured in the same configuration file.</p>
 <h3 id="omnidb-user-database"><span class="header-section-number">2.2.1</span> OmniDB User Database</h3>
-<p>Since version 2.4.0, upon initialization both server and app will create a file <code>~/.omnidb/omnidb.db</code> in the user home directory, if it does not exist. That is being done by the message <em>OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0</em> you saw above. This file is also called <strong>user database</strong> and contains user data. If it already exists, then OmniDB will check whether the version of the server matches the version of the user database:</p>
+<p>Since version 2.4.0, upon initialization both server and app will create a file <code>~/.omnidb/omnidb-app/omnidb.db</code> (for OmniDB app) or <code>~/.omnidb/omnidb-server/omnidb.db</code> (for OmniDB server) in the user home directory, if it does not exist. That can be confirmed by the message <em>OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0</em> you saw above. This file is also called <strong>user database</strong> and contains user data. If it already exists, then OmniDB will check whether the version of the server matches the version of the user database:</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">user@machine</span>:~$ sudo omnidb-server
 <span class="ex">Starting</span> OmniDB websocket...
 <span class="ex">Checking</span> port availability...
@@ -184,7 +184,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="ex">Starting</span> server OmniDB 2.5.0 at 0.0.0.0:8000.
 <span class="ex">Open</span> OmniDB in your favorite browser
 <span class="ex">Press</span> Ctrl+C to exit</code></pre></div>
-<h3 id="omnidb-in-the-browser"><span class="header-section-number">2.2.2</span> OmniDB in the browser</h3>
+<h3 id="omnidb-configuration-file"><span class="header-section-number">2.2.2</span> OmniDB configuration file</h3>
+<p>Starting on version 2.1.0, OmniDB server comes with a configuration file <code>omnidb.conf</code> that enables the user to specify parameters such as port and listening address. Also, 2.1.0 enables us to start the server with SSL, this requires a certificate and is configured in the same configuration file.</p>
+<p>Starting on version 2.4.0, this file is located in <code>/.omnidb/omnidb-app/omnidb.db</code> (for OmniDB app) or <code>~/.omnidb/omnidb-server/omnidb.db</code> (for OmniDB server) in the user home directory.</p>
+<h3 id="omnidb-in-the-browser"><span class="header-section-number">2.2.3</span> OmniDB in the browser</h3>
 <p>Now that the web server is running, you may access OmniDB browser-based app on your favorite browser. Type in address bar: <code>localhost:8000</code> and hit <code>Enter</code>. If everything went fine, you shall see a page like this:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_002.png" /></p>
 <p>Now you know that OmniDB is running correctly. In the next chapters, we will see how to login for the first time, how to create an user and to utilize OmniDB.</p>
@@ -279,7 +282,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><strong>Ctrl-Shift-&lt;</strong>: Change focus to outer tab at left</li>
 <li><strong>Ctrl-Shift-&gt;</strong>: Change focus to outer tab at right</li>
 </ul>
-<p>Starting from OmniDB version 2.3.0, all SQL Query tabs are automatically saved whenever you execute them. Even if you close OmniDB window or browser tab, they are already stored in OmniDB <em>User Database</em>. They will be automatically restored when you open OmniDB again (if you are using app), open it in another browser window (if you are using server), or even if you clicked in the <em>Connections</em> window or logged out.</p>
+<p>Starting from OmniDB version 2.3.0, all SQL Query tabs are automatically saved whenever you execute them. Even if you close OmniDB window or browser tab, they are already stored in OmniDB <em>User Database</em>. They will be automatically restored when you open OmniDB again (if you are using app), open it in another browser window (if you are using server), or even if you clicked in the <em>Connections</em> window or logged out. Removing an outer tab or inner tab by the interface makes it permanently deleted, so it will not be restored.</p>
 <h1 id="creating-changing-and-removing-tables"><span class="header-section-number">5</span> Creating, Changing and Removing Tables</h1>
 <h2 id="creating-tables"><span class="header-section-number">5.1</span> Creating tables</h2>
 <p>OmniDB has a table creation interface that lets you configure columns, constraints and indexes. A couple of observations should be mentioned:</p>
@@ -287,17 +290,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Most DBMS automatically create indexes when primary keys and unique constraints are created. Because of that, the indexes tab is only available after creating the table.</li>
 <li>Each DBMS has its unique characteristics and limitations regarding table creation and the OmniDB interface reflects these limitations. For instance, SQLite does not allow us to change existing columns and constraints. Because of that, the interface lets us change only table name and add new columns when dealing with SQLite databases (it is still not the case in OmniDB Python version, as it currently supports only PostgreSQL databases).</li>
 </ul>
-<p>We will create example tables (<em>Customer</em> and <em>Address</em>) in the <code>testdb</code> database we connected to earlier. Right click on the <strong>Tables</strong> node and select the <strong>New Table</strong> action:</p>
+<p>We will create example tables (<em>Customer</em> and <em>Address</em>) in the <code>testdb</code> database we connected to earlier. Right click on the <strong>Tables</strong> node and select the <strong>Create Table</strong> action:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_028.png" /></p>
 <p>We will create the table <em>Customer</em> with a primary key that will be referenced by the table <em>Address</em>:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_029.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_030.png" /></p>
-<p>Note how the table appers in the <em>Tables</em> tree node:</p>
+<p>Click on the <em>Save Changes</em> button. Right-click the <em>Tables</em> tree node and click <em>Refresh</em>. Note how the table appers in the <em>Tables</em> tree node:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_031.png" /></p>
 <p>Now create the table <em>Address</em> with a primary key and a foreign key:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_032.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_033.png" /></p>
-<p>At this point we have two tables in schema <code>public</code>. The schema structure can be seen with the graph feature by right clicking on the schema <code>public</code> node of the tree and selecting <em>Render Graph &gt; Simple Graph</em>:</p>
+<p>Don't forget to click on the <em>Save Changes</em> button when done. At this point we have two tables in schema <code>public</code>. The schema structure can be seen with the graph feature by right clicking on the schema <code>public</code> node of the tree and selecting <em>Render Graph &gt; Simple Graph</em>:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_034.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_035.png" /></p>
 <p>And this is what the <em>Complete Graph</em> looks like:</p>
