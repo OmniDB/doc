@@ -1,9 +1,9 @@
 # Managing Table Data
 
-The tool allow us to edit records contained in tables through a very simple and
+The tool allows us to edit records contained in tables through a very simple and
 intuitive interface. Given that only a few DBMS have unique identifiers for
 table records, we opted to allow data editing and removal only for tables that
-have primary keys. Tables that do not have it can only receive new records.
+have a primary key. Tables that do not have it can only receive new records.
 
 To access the record editing interface, right click the table node and select
 the action *Data Actions > Edit Data*:

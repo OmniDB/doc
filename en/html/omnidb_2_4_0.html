@@ -77,19 +77,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li><a href="#managing-table-data"><span class="toc-section-number">6</span> Managing Table Data</a></li>
 <li><a href="#writing-sql-queries"><span class="toc-section-number">7</span> Writing SQL Queries</a></li>
-<li><a href="#visualizing-data"><span class="toc-section-number">8</span> Visualizing Data</a><ul>
-<li><a href="#simple-graph"><span class="toc-section-number">8.1</span> Simple graph</a></li>
-<li><a href="#complete-graph"><span class="toc-section-number">8.2</span> Complete graph</a></li>
+<li><a href="#visualizing-query-plans"><span class="toc-section-number">8</span> Visualizing Query Plans</a><ul>
+<li><a href="#textual-visualization"><span class="toc-section-number">8.1</span> Textual visualization</a></li>
+<li><a href="#tree-visualization"><span class="toc-section-number">8.2</span> Tree visualization</a></li>
 </ul></li>
-<li><a href="#managing-other-postgresql-elements"><span class="toc-section-number">9</span> Managing other PostgreSQL Elements</a></li>
-<li><a href="#additional-features"><span class="toc-section-number">10</span> Additional Features</a><ul>
-<li><a href="#sql-history"><span class="toc-section-number">10.1</span> SQL History</a></li>
-<li><a href="#user-settings"><span class="toc-section-number">10.2</span> User Settings</a></li>
+<li><a href="#visualizing-data"><span class="toc-section-number">9</span> Visualizing Data</a><ul>
+<li><a href="#simple-graph"><span class="toc-section-number">9.1</span> Simple graph</a></li>
+<li><a href="#complete-graph"><span class="toc-section-number">9.2</span> Complete graph</a></li>
 </ul></li>
-<li><a href="#omnidb-config-tool"><span class="toc-section-number">11</span> OmniDB Config Tool</a><ul>
-<li><a href="#create-super-user"><span class="toc-section-number">11.1</span> Create super user</a></li>
-<li><a href="#vacuum"><span class="toc-section-number">11.2</span> Vacuum</a></li>
-<li><a href="#reset-database"><span class="toc-section-number">11.3</span> Reset database</a></li>
+<li><a href="#managing-other-postgresql-elements"><span class="toc-section-number">10</span> Managing other PostgreSQL Elements</a></li>
+<li><a href="#additional-features"><span class="toc-section-number">11</span> Additional Features</a><ul>
+<li><a href="#sql-history"><span class="toc-section-number">11.1</span> SQL History</a></li>
+<li><a href="#user-settings"><span class="toc-section-number">11.2</span> User Settings</a></li>
+</ul></li>
+<li><a href="#omnidb-config-tool"><span class="toc-section-number">12</span> OmniDB Config Tool</a><ul>
+<li><a href="#create-super-user"><span class="toc-section-number">12.1</span> Create super user</a></li>
+<li><a href="#vacuum"><span class="toc-section-number">12.2</span> Vacuum</a></li>
+<li><a href="#reset-database"><span class="toc-section-number">12.3</span> Reset database</a></li>
 </ul></li>
 </ul>
 </div>
@@ -316,7 +320,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>In order to remove a table just right click the table node and select the action <em>Table Actions &gt; Drop Table</em>:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_040.png" /></p>
 <h1 id="managing-table-data"><span class="header-section-number">6</span> Managing Table Data</h1>
-<p>The tool allow us to edit records contained in tables through a very simple and intuitive interface. Given that only a few DBMS have unique identifiers for table records, we opted to allow data editing and removal only for tables that have primary keys. Tables that do not have it can only receive new records.</p>
+<p>The tool allows us to edit records contained in tables through a very simple and intuitive interface. Given that only a few DBMS have unique identifiers for table records, we opted to allow data editing and removal only for tables that have a primary key. Tables that do not have it can only receive new records.</p>
 <p>To access the record editing interface, right click the table node and select the action <em>Data Actions &gt; Edit Data</em>:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_041.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_042.png" /></p>
@@ -339,29 +343,39 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_049.png" /></p>
 <p>Besides autocompleting table columns the editor also searches for columns contained in subqueries:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_050.png" /></p>
-<p>The field to select the type of command has the following options:</p>
-<ul>
-<li><strong>Script</strong>: script execution, which is a sequence of commands separated by semicolon:</li>
-</ul>
+<p>If the query raises an error, OmniDB will show the error message in the <em>Data</em> tab and the cursor will be placed in the position indicated by the error message:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_051.png" /></p>
-<p>The return shows the response time, the number of commands that were successfully executed, the number of commands that generated errors and a list displaying each error.</p>
-<ul>
-<li><p><strong>Execute</strong>: execution of only one command. The return shows the response time or an error.</p></li>
-<li><p><strong>Query (10, 100, 1000, all) rows</strong>: execution of a query that returns a set of records, which are displayed on a grid. Just like in the record editing interface each cell can be visualized separately by right clicking it:</p></li>
-</ul>
+<p>When the query is successful, OmniDB shows the number of records returned by the query, the start time and the duration of the query. The <em>Data</em> tab will show a data grid with the records records returned by the query.</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_052.png" /></p>
-<h1 id="visualizing-data"><span class="header-section-number">8</span> Visualizing Data</h1>
+<p>Just like in the record editing interface each cell can be visualized separately by right clicking it.</p>
+<p>If you click on the <em>Indent SQL</em> button, OmniDB will reorganize the SQL text to make it prettier:</p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_053.png" /></p>
+<h1 id="visualizing-query-plans"><span class="header-section-number">8</span> Visualizing Query Plans</h1>
+<p>OmniDB 2.2.0 introduced a very useful feature: graphical query plan visualization. This may come in handy when writing or optimizing queries, since it allows you to easily identify performance bottlenecks in your SQL query.</p>
+<p>For this feature, <em>SQL Query</em> inner tab shows 2 buttons: <em>Explain</em> (magnifier in orange circle button )and <em>Explain Analyze</em> (magnifier in green circle button).</p>
+<h2 id="textual-visualization"><span class="header-section-number">8.1</span> Textual visualization</h2>
+<p>When you click the <em>Explain</em> button, OmniDB will execute an <code>EXPLAIN</code> command in your query. Initial visualization is <em>textual</em> and will show exactly the output of the <code>EXPLAIN</code> command, but with colored bars representing the estimated cost. The higher the cost, the darker and wider the bar.</p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_054.png" /></p>
+<p>When you click the <em>Explain Analyze</em> button, OmniDB will execute an <code>EXPLAIN ANALYZE</code> command in your query. Beware that this command will really execute the query. Also, the textual visualization will show much more information, and the costs are not estimated as in those provided by the <code>EXPLAIN</code> command; they are real costs.</p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_055.png" /></p>
+<h2 id="tree-visualization"><span class="header-section-number">8.2</span> Tree visualization</h2>
+<p>Both <em>Explain</em> and <em>Explain Analyze</em> modes also can graphically represent the textual output into a <em>tree</em> diagram. Each circle represent a node executed by the query plan, and the larger the circle, the higher the cost.</p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_056.png" /></p>
+<p>When queries become more and more complex, also its query plan can be very complex. With such queries (like the <em>check bloat</em> query we executed below) the tree visualization can be very interesting:</p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_057.png" /></p>
+<p>The query plan visualization component allows you to easily switch between textual and 2 tree visualizations, which can be zoomed in and out.</p>
+<h1 id="visualizing-data"><span class="header-section-number">9</span> Visualizing Data</h1>
 <p>This feature displays a graph with nodes representing tables and edges representing table relationships with foreign keys. Using the mouse, the user is able to zoom in, zoom out, and drag and drop nodes to change its position.</p>
 <p>There are two types of graphs: <em>Simple Graph</em> and <em>Complete Graph</em>.</p>
-<h2 id="simple-graph"><span class="header-section-number">8.1</span> Simple graph</h2>
+<h2 id="simple-graph"><span class="header-section-number">9.1</span> Simple graph</h2>
 <p>To access it just right click the root node of the tree and then select the action <em>Render Graph &gt; Simple Graph</em>:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_053.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_054.png" /></p>
-<h2 id="complete-graph"><span class="header-section-number">8.2</span> Complete graph</h2>
+<h2 id="complete-graph"><span class="header-section-number">9.2</span> Complete graph</h2>
 <p>This graph displays tables with all its columns and respective data types. Additionally, edges now are labeled with information about the specific foreign key. To access it just right click the root node of the tree and then select the action <em>Render Graph &gt; Complete Graph</em>:</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_055.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_056.png" /></p>
-<h1 id="managing-other-postgresql-elements"><span class="header-section-number">9</span> Managing other PostgreSQL Elements</h1>
+<h1 id="managing-other-postgresql-elements"><span class="header-section-number">10</span> Managing other PostgreSQL Elements</h1>
 <p>With the exception of tables, all PostgreSQL structures are possible to be managed with the use of <em>SQL templates</em>. This gives the user more power than using graphical forms to manipulate structures.</p>
 <p>For example, let's consider the sequences inside the schema <code>public</code> of the database <code>testdb</code>. To create a new sequence, right click on the <em>Sequences</em> node, and choose <em>New Sequence</em>.</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_057.png" /></p>
@@ -372,12 +386,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_060.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_061.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_062.png" /></p>
-<h1 id="additional-features"><span class="header-section-number">10</span> Additional Features</h1>
-<h2 id="sql-history"><span class="header-section-number">10.1</span> SQL History</h2>
+<h1 id="additional-features"><span class="header-section-number">11</span> Additional Features</h1>
+<h2 id="sql-history"><span class="header-section-number">11.1</span> SQL History</h2>
 <p>Every interaction the user does with every database is logged in OmniDB's <em>SQL History</em>. To access it you need to click on the clock-like icon on the upper right corner. OmniDB will show a pop-up with all actions in a paginated grid.</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_063.png" /></p>
 <p>Each action shows date time it started, the time it ended, the duration, the mode, the status and the command. As every grid in OmniDB, you can right click on the command and click <em>View Content</em>, where another pop-up will open showing the content in a larger text editor.</p>
-<h2 id="user-settings"><span class="header-section-number">10.2</span> User Settings</h2>
+<h2 id="user-settings"><span class="header-section-number">11.2</span> User Settings</h2>
 <p>Also in the upper right corner, by clicking in the gear-like icon, OmniDB will open the <em>User Settings</em> pop-up. It is composed by two tabs:</p>
 <ul>
 <li><p><strong>User</strong>: Allows the user to change its password. More user settings will be added in future.</p></li>
@@ -391,7 +405,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_065.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_066.png" /></p>
-<h1 id="omnidb-config-tool"><span class="header-section-number">11</span> OmniDB Config Tool</h1>
+<h1 id="omnidb-config-tool"><span class="header-section-number">12</span> OmniDB Config Tool</h1>
 <p>Every installation of OmniDB also comes with a small CLI utility called <em>OmniDB Config</em>. It will have a different file name, depending on the way you installed OmniDB:</p>
 <ul>
 <li>If you are using a tarball or zip package, it is called <strong>omnidb-config</strong>, for both server and app versions;</li>
@@ -409,12 +423,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
                         <span class="ex">create</span> super user: -c username password
   <span class="ex">-a</span>, --vacuum          databases maintenance
   <span class="ex">-r</span>, --resetdatabase   reset databases</code></pre></div>
-<h2 id="create-super-user"><span class="header-section-number">11.1</span> Create super user</h2>
+<h2 id="create-super-user"><span class="header-section-number">12.1</span> Create super user</h2>
 <p>Option <code>-c</code> allows you to create a new super user, without needing to open OmniDB interface.</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">user@machine</span>:~$ omnidb-config-app -c william password
 <span class="ex">Creating</span> superuser...
 <span class="ex">Superuser</span> created.</code></pre></div>
-<h2 id="vacuum"><span class="header-section-number">11.2</span> Vacuum</h2>
+<h2 id="vacuum"><span class="header-section-number">12.2</span> Vacuum</h2>
 <p>OmniDB has two databases:</p>
 <ul>
 <li><code>omnidb.db</code>: Stores all users and connections, and other OmniDB related stuff;</li>
@@ -426,7 +440,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="ex">Done.</span>
 <span class="ex">Vacuuming</span> Sessions database...
 <span class="ex">Done.</span></code></pre></div>
-<h2 id="reset-database"><span class="header-section-number">11.3</span> Reset database</h2>
+<h2 id="reset-database"><span class="header-section-number">12.3</span> Reset database</h2>
 <p>If you wish to wipe out all OmniDB information and get a clean database as it was just installed, you can use the <code>-r</code> option. Use it with caution!</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">user@machine</span>:~$ omnidb-config-app -r
 <span class="ex">***</span> ATENTION *** ALL USERS DATA WILL BE LOST

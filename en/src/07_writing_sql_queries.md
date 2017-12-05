@@ -16,22 +16,22 @@ contained in subqueries:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_050.png)
 
-The field to select the type of command has the following options:
-
-- **Script**: script execution, which is a sequence of commands separated by
-semicolon:
+If the query raises an error, OmniDB will show the error message in the *Data*
+tab and the cursor will be placed in the position indicated by the error
+message:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_051.png)
 
-The return shows the response time, the number of commands that were
-successfully executed, the number of commands that generated errors and a list
-displaying each error.
-
-- **Execute**: execution of only one command. The return shows the response time
-or an error.
-
-- **Query (10, 100, 1000, all) rows**: execution of a query that returns a set
-of records, which are displayed on a grid. Just like in the record editing
-interface each cell can be visualized separately by right clicking it:
+When the query is successful, OmniDB shows the number of records returned by the
+query, the start time and the duration of the query. The *Data* tab will show
+a data grid with the records records returned by the query.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_052.png)
+
+Just like in the record editing interface each cell can be visualized separately
+by right clicking it.
+
+If you click on the *Indent SQL* button, OmniDB will reorganize the SQL text to
+make it prettier:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_053.png)
