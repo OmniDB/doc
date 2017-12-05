@@ -89,6 +89,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><a href="#additional-features"><span class="toc-section-number">11</span> Additional Features</a><ul>
 <li><a href="#sql-history"><span class="toc-section-number">11.1</span> SQL History</a></li>
 <li><a href="#user-settings"><span class="toc-section-number">11.2</span> User Settings</a></li>
+<li><a href="#contextual-help"><span class="toc-section-number">11.3</span> Contextual Help</a></li>
 </ul></li>
 <li><a href="#omnidb-config-tool"><span class="toc-section-number">12</span> OmniDB Config Tool</a><ul>
 <li><a href="#create-super-user"><span class="toc-section-number">12.1</span> Create super user</a></li>
@@ -369,42 +370,44 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>There are two types of graphs: <em>Simple Graph</em> and <em>Complete Graph</em>.</p>
 <h2 id="simple-graph"><span class="header-section-number">9.1</span> Simple graph</h2>
 <p>To access it just right click the root node of the tree and then select the action <em>Render Graph &gt; Simple Graph</em>:</p>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_053.png" /></p>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_054.png" /></p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_058.png" /></p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_059.png" /></p>
 <h2 id="complete-graph"><span class="header-section-number">9.2</span> Complete graph</h2>
 <p>This graph displays tables with all its columns and respective data types. Additionally, edges now are labeled with information about the specific foreign key. To access it just right click the root node of the tree and then select the action <em>Render Graph &gt; Complete Graph</em>:</p>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_055.png" /></p>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_056.png" /></p>
-<h1 id="managing-other-postgresql-elements"><span class="header-section-number">10</span> Managing other PostgreSQL Elements</h1>
-<p>With the exception of tables, all PostgreSQL structures are possible to be managed with the use of <em>SQL templates</em>. This gives the user more power than using graphical forms to manipulate structures.</p>
-<p>For example, let's consider the sequences inside the schema <code>public</code> of the database <code>testdb</code>. To create a new sequence, right click on the <em>Sequences</em> node, and choose <em>New Sequence</em>.</p>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_057.png" /></p>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_058.png" /></p>
-<p>After you change the name of the sequence, you can uncomment other command options and set them accordingly to your needs. When all the command looks fine, you can click on the <em>Execute button</em> and the new sequence will be created:</p>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_059.png" /></p>
-<p>With right click on an existing sequence, you can alter or drop it. It will work the same way as the creation, by using a SQL template for the user to change.</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_060.png" /></p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_061.png" /></p>
+<h1 id="managing-other-postgresql-elements"><span class="header-section-number">10</span> Managing other PostgreSQL Elements</h1>
+<p>With the exception of tables, all PostgreSQL structures are possible to be managed with the use of <em>SQL templates</em>. This gives the user more power than using graphical forms to manipulate structures.</p>
+<p>For example, let's consider the sequences inside the schema <code>public</code> of the database <code>testdb</code>. To create a new sequence, right click on the <em>Sequences</em> node, and choose <em>Create Sequence</em>.</p>
 <p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_062.png" /></p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_063.png" /></p>
+<p>After you change the name of the sequence, you can uncomment other command options and set them accordingly to your needs. When the entire command looks fine, just execute it and the new sequence will be created:</p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_064.png" /></p>
+<p>With right click on an existing sequence, you can alter or drop it. It will work the same way as the creation, by using a SQL template for the user to change.</p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_065.png" /></p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_066.png" /></p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_067.png" /></p>
 <h1 id="additional-features"><span class="header-section-number">11</span> Additional Features</h1>
 <h2 id="sql-history"><span class="header-section-number">11.1</span> SQL History</h2>
-<p>Every interaction the user does with every database is logged in OmniDB's <em>SQL History</em>. To access it you need to click on the clock-like icon on the upper right corner. OmniDB will show a pop-up with all actions in a paginated grid.</p>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_063.png" /></p>
-<p>Each action shows date time it started, the time it ended, the duration, the mode, the status and the command. As every grid in OmniDB, you can right click on the command and click <em>View Content</em>, where another pop-up will open showing the content in a larger text editor.</p>
+<p>Every interaction the user does with every database is logged in OmniDB's <em>SQL History</em>. To access it you need to click on the icon with an <em>H</em> on the upper right corner. OmniDB will open an inner tab with all actions in a paginated grid.</p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_068.png" /></p>
+<p>Each action shows date time it started, the time it ended, the duration, the status and the command. As every grid in OmniDB, you can right click on the command and click <em>View Content</em>, where another pop-up will open showing the content in a larger text editor.</p>
 <h2 id="user-settings"><span class="header-section-number">11.2</span> User Settings</h2>
 <p>Also in the upper right corner, by clicking in the gear-like icon, OmniDB will open the <em>User Settings</em> pop-up. It is composed by two tabs:</p>
 <ul>
-<li><p><strong>User</strong>: Allows the user to change its password. More user settings will be added in future.</p></li>
+<li><p><strong>User</strong>: Allows the user to change its password. More user settings will be added in the future.</p></li>
 <li><p><strong>Editor</strong>: Allows the user to change the font size of the SQL Editor, and also change the entire OmniDB theme. There are a lot of OmniDB themes, each of them change the syntax highlight color of the editor. They are also categorized in light and dark themes. A light theme is the default; a dark theme will change the entire interface of OmniDB.</p></li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_064.png" /></p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_069.png" /></p>
 <p>Every change in user settings require that you either:</p>
 <ul>
 <li>Refresh the page, if you are using OmniDB server and the interface through a web browser; or</li>
 <li>Open and close OmniDB, if you are using OmniDB app.</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_065.png" /></p>
-<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_066.png" /></p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_070.png" /></p>
+<h2 id="contextual-help"><span class="header-section-number">11.3</span> Contextual Help</h2>
+<p>Most of tree nodes (generally grouping ones like <em>Schemas</em> or <em>Tables</em>) offer contextual help. This feature can be accessed by right-clicking the tree node. When you click in the <em>Doc: ...</em> option, OmniDB will open an inner tab showing a web browser pointing to the specific page in the online <strong>PostgreSQL Documentation</strong>. Also, it will redirect to the specific page considering the PostgreSQL version you are connected to.</p>
+<p><img src="https://raw.githubusercontent.com/OmniDB/doc/master/img/image_071.png" /></p>
 <h1 id="omnidb-config-tool"><span class="header-section-number">12</span> OmniDB Config Tool</h1>
 <p>Every installation of OmniDB also comes with a small CLI utility called <em>OmniDB Config</em>. It will have a different file name, depending on the way you installed OmniDB:</p>
 <ul>
