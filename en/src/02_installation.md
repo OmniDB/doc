@@ -123,9 +123,7 @@ listening address. Also, 2.1.0 enables us to start the server with SSL, this
 requires a certificate and is configured in the same configuration file.
 
 Starting on version 2.4.0, this file is located in
-`/.omnidb/omnidb-app/omnidb.db` (for OmniDB app) or
-`~/.omnidb/omnidb-server/omnidb.db` (for OmniDB server) in the user home
-directory.
+`~/.omnidb/omnidb-server/omnidb.conf` in the user home directory.
 
 ### OmniDB in the browser
 
