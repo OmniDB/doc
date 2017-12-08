@@ -1,6 +1,6 @@
 # Writing and Debugging PL/pgSQL Functions
 
-# Introduction
+#### Introduction
 
 PostgreSQL is more than a RDBMS engine. It is a developing platform. It provides
 a very powerful and flexible programming language called `PL/pgSQL`. Using this
@@ -35,7 +35,7 @@ it as a PostgreSQL extension, and in this case it will appear under the
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_072.png)
 
 
-# Writing functions
+#### Writing functions
 
 In the `public` schema, right-click the `Functions` node and click on *Create
 Function*. It will open a *SQL Query* inner tab, already containing a SQL
@@ -109,7 +109,7 @@ with handy SQL templates in them. But the most interesting action right now is
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_077.png)
 
-# Debugging functions
+#### Debugging functions
 
 The debugger is a specific inner tab composed of a SQL editor that will show the
 process step by step on top of the function source code, and 5 tabs to manage
@@ -198,7 +198,7 @@ through yellow (medium duration) until red (high duration), as in a
 Also note the *Total duration* message, which shows execution time of the
 function, without considering the time you spent analyzing it.
 
-## Inspecting record attribute values
+#### Inspecting record attribute values
 
 An interesting feature that we do not usually see in other debuggers is the
 ability to inspect each attribute of a variable of type `record`. OmniDB

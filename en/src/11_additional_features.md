@@ -1,6 +1,6 @@
 # Additional Features
 
-## SQL History
+#### SQL History
 
 Every interaction the user does with every database is logged in OmniDB's *SQL
 History*. To access it you need to click on the icon with an *H* on the upper
@@ -14,7 +14,7 @@ status and the command. As every grid in OmniDB, you can right click on the
 command and click *View Content*, where another pop-up will open showing the
 content in a larger text editor.
 
-## User Settings
+#### User Settings
 
 Also in the upper right corner, by clicking in the gear-like icon, OmniDB will
 open the *User Settings* pop-up. It is composed by two tabs:
@@ -38,7 +38,7 @@ web browser; or
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_070.png)
 
-## Contextual Help
+#### Contextual Help
 
 Most of tree nodes (generally grouping ones like *Schemas* or *Tables*) offer
 contextual help. This feature can be accessed by right-clicking the tree node.
