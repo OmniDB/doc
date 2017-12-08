@@ -1,6 +1,6 @@
 # Creating, Changing and Removing Tables
 
-## Creating tables
+#### Creating tables
 
 OmniDB has a table creation interface that lets you configure columns,
 constraints and indexes. A couple of observations should be mentioned:
@@ -53,7 +53,7 @@ And this is what the *Complete Graph* looks like:
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_036.png)
 
 
-## Editing tables
+#### Editing tables
 
 OmniDB also lets you edit existing tables (always following DBMS limitations).
 To test this feature we will add a new column to the table *Customer*. To access
@@ -72,7 +72,7 @@ we will try to add the column *cust_name*, which already belongs to this table:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_039.png)
 
-## Removing tables
+#### Removing tables
 
 In order to remove a table just right click the table node and select the action
 *Table Actions > Drop Table*:

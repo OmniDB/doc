@@ -26,7 +26,7 @@ Options:
   -r, --resetdatabase   reset databases
 ```
 
-## Create super user
+#### Create super user
 
 Option `-c` allows you to create a new super user, without needing to open
 OmniDB interface.
@@ -37,7 +37,7 @@ Creating superuser...
 Superuser created.
 ```
 
-## Vacuum
+#### Vacuum
 
 OmniDB has two databases:
 
@@ -55,7 +55,7 @@ Vacuuming Sessions database...
 Done.
 ```
 
-## Reset database
+#### Reset database
 
 If you wish to wipe out all OmniDB information and get a clean database as it
 was just installed, you can use the `-r` option. Use it with caution!

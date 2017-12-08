@@ -11,7 +11,7 @@ server on users' networks.
 
 Both application and server can be installed on the same machine.
 
-## OmniDB Application
+#### OmniDB Application
 
 In order to run OmniDB app, you don't need to install any additional piece of
 software. Just head to [omnidb.org](omnidb.org) and download the latest package
@@ -32,7 +32,7 @@ through your desktop environment application menu or via command line with
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_001.png)
 
 
-## OmniDB Server
+#### OmniDB Server
 
 Like OmniDB app, OmniDB server doesn't require any additional piece of software
 and the same options for operating system and architecture are provided.
@@ -71,7 +71,7 @@ Starting server OmniDB 2.4.0 at 127.0.0.1:8080.
 Open OmniDB in your favorite browser
 ```
 
-### OmniDB User Database
+#### OmniDB User Database
 
 Since version 2.4.0, upon initialization both server and app will create a file
 `~/.omnidb/omnidb-app/omnidb.db` (for OmniDB app) or
@@ -115,7 +115,7 @@ Open OmniDB in your favorite browser
 Press Ctrl+C to exit
 ```
 
-### OmniDB configuration file
+#### OmniDB configuration file
 
 Starting on version 2.1.0, OmniDB server comes with a configuration file
 `omnidb.conf` that enables the user to specify parameters such as port and
@@ -125,7 +125,7 @@ requires a certificate and is configured in the same configuration file.
 Starting on version 2.4.0, this file is located in
 `~/.omnidb/omnidb-server/omnidb.conf` in the user home directory.
 
-### OmniDB in the browser
+#### OmniDB in the browser
 
 Now that the web server is running, you may access OmniDB browser-based app on
 your favorite browser. Type in address bar: `localhost:8000` and hit `Enter`. If

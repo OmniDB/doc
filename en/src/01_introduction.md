@@ -32,7 +32,7 @@ OmniDB asks for the password. This password is encrypted and stored in memory
 for a specific amount of time. When this time expires, OmniDB asks the password
 again. This ensures maximum security for the database OmniDB is connecting to.
 
-## History
+#### History
 
 **OmniDB**’s creators, Rafael Thofehrn Castro and William Ivanski, worked in a
 company where they needed to deal with several different databases from

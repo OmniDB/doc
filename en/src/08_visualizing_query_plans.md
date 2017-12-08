@@ -7,7 +7,7 @@ it allows you to easily identify performance bottlenecks in your SQL query.
 For this feature, *SQL Query* inner tab shows 2 buttons: *Explain* (magnifier in
 orange circle button )and *Explain Analyze* (magnifier in green circle button).
 
-## Textual visualization
+#### Textual visualization
 
 When you click the *Explain* button, OmniDB will execute an `EXPLAIN` command in
 your query. Initial visualization is *textual* and will show exactly the output
@@ -24,7 +24,7 @@ real costs.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_055.png)
 
-## Tree visualization
+#### Tree visualization
 
 Both *Explain* and *Explain Analyze* modes also can graphically represent the
 textual output into a *tree* diagram. Each circle represent a node executed by

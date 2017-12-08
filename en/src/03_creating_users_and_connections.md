@@ -1,6 +1,6 @@
 # Creating Users and Connections
 
-## Logging in as user *admin*
+#### Logging in as user *admin*
 
 OmniDB comes only with the user *admin*. If you are using the server version,
 the first thing to do is sign in as *admin*, the default password is *admin*.
@@ -12,7 +12,7 @@ The next window is the **Connections** window. We will talk about it later.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_004.png)
 
-## Creating another user
+#### Creating another user
 
 Click on the *Users* icon on the upper right corner. It will open a popup
 that allows the current OmniDB super user to create a new OmniDB user.
@@ -33,7 +33,7 @@ users. When you are done, click on the *Save Data* button inside the popup.
 You can create as many users as you want, edit existing users and also delete
 users by clicking on the red cross at the actions column. Now you can logout.
 
-## Signing in as the new user
+#### Signing in as the new user
 
 Let us sign in as the user we just created.
 
@@ -44,7 +44,7 @@ And we can see the **Connections** window again. Note that now there is no
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_009.png)
 
-## Creating connections
+#### Creating connections
 
 OmniDB C# version supported several DBMS. At the moment, OmniDB Python version,
 or `OmniDB 2.0`, supports only PostgreSQL. More DBMS support is being added as

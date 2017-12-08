@@ -6,7 +6,7 @@ action in the connections grid.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_014.png)
 
-## Sections of the *Workspace* window
+#### Sections of the *Workspace* window
 
 This interface has several elements:
 
@@ -21,7 +21,7 @@ feature
 - **3) Options**: Shows the current user logged in, and also links for *user
 settings*, *query history*, *information* and *logout*.
 
-## Connection Outer Tab
+#### Connection Outer Tab
 
 So, the outer table named *Test* has this name because of the alias we put in
 the connection to the `testdb`. This tab is a *Connection Outer Tab*. Notice the
@@ -56,7 +56,7 @@ messages, those will be shown in the *Messages* subtab. If instead of *Execute*
 you clicked in *Explain* or *Explain Analyze*, the explain plan for the query
 will be shown in the *Explain* subtab.
 
-## Working with databases
+#### Working with databases
 
 Take a look at your connections selector. OmniDB always points to the first
 available connection but you can change it by clicking on the selector.
@@ -110,7 +110,7 @@ queries. To execute, click on the action button or hit the keystroke `Ctrl-Q`.
 If the results exceed 50 registers, then extra buttons *Fetch More* and *Fetch
 All* will appear. More details in the next chapters.
 
-## Working with multiple tabs inside the same connection
+#### Working with multiple tabs inside the same connection
 
 Inside a single connection, you can create several inner tabs by clicking on the
 last little tab with a cross. Each new inner tab will be a *Query Tab*.
