@@ -38,37 +38,29 @@ Like OmniDB app, OmniDB server doesn't require any additional piece of software
 and the same options for operating system and architecture are provided.
 
 Use the specific installer for your Operational System and it will be available
-through command line with `omnidb-server`.
-
-You will need administrator privileges:
+through command line with `omnidb-server`:
 
 ```bash
-user@machine:~$ sudo omnidb-server
-Starting OmniDB websocket...
-Checking port availability...
-Starting websocket server at port 25482.
-OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0
+user@machine:~$ omnidb-server
 Starting OmniDB server...
 Checking port availability...
 Starting server OmniDB 2.4.0 at 0.0.0.0:8000.
-Open OmniDB in your favorite browser
+Starting migration of user database from version 0.0.0 to version 2.4.0
+OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0
 Press Ctrl+C to exit
 ```
 
-Note how OmniDB starts a *websocket server* in a random port (in the above
-example it started in port 25482) and a *web server* in port 8000. You can also
-specify websocket server port, web server port and listening address:
+Note how OmniDB starts a *web server* in port 8000. You can also specify
+web server port and listening address:
 
 ```bash
-user@machine:~$ sudo omnidb-server -p 8080 -w 2000 -H 127.0.0.1
-Starting OmniDB websocket...
-Checking port availability...
-Starting websocket server at port 2000.
-OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0
+user@machine:~$ omnidb-server -p 8080 -H 127.0.0.1
 Starting OmniDB server...
 Checking port availability...
-Starting server OmniDB 2.4.0 at 127.0.0.1:8080.
-Open OmniDB in your favorite browser
+Starting server OmniDB 2.4.0 at 0.0.0.0:8080.
+Starting migration of user database from version 0.0.0 to version 2.4.0
+OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0
+Press Ctrl+C to exit
 ```
 
 #### OmniDB User Database
@@ -83,15 +75,11 @@ already exists, then OmniDB will check whether the version of the server matches
 the version of the user database:
 
 ```bash
-user@machine:~$ sudo omnidb-server
-Starting OmniDB websocket...
-Checking port availability...
-Starting websocket server at port 25482.
-User database version 2.4.0 is already matching server version.
+user@machine:~$ omnidb-server
 Starting OmniDB server...
 Checking port availability...
 Starting server OmniDB 2.4.0 at 0.0.0.0:8000.
-Open OmniDB in your favorite browser
+User database version 2.4.0 is already matching server version.
 Press Ctrl+C to exit
 ```
 
@@ -103,15 +91,12 @@ example. After the upgrade, when you start OmniDB server, it will apply the
 changes version 2.5.0 requires. So you will see something like that:
 
 ```bash
-user@machine:~$ sudo omnidb-server
-Starting OmniDB websocket...
-Checking port availability...
-Starting websocket server at port 25482.
-OmniDB successfully migrated user database from version 2.4.0 to version 2.5.0
+user@machine:~$ omnidb-server
 Starting OmniDB server...
 Checking port availability...
-Starting server OmniDB 2.5.0 at 0.0.0.0:8000.
-Open OmniDB in your favorite browser
+Starting server OmniDB 2.4.0 at 0.0.0.0:8080.
+Starting migration of user database from version 2.4.0 to version 2.5.0
+OmniDB successfully migrated user database from version 2.4.0 to version 2.5.0
 Press Ctrl+C to exit
 ```
 

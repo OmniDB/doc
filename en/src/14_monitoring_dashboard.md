@@ -173,6 +173,12 @@ The source code of this kind of unit is more complex. There are two scripts:
 - **Data Script**: Executed every time the unit is refreshed;
 - **Chart Script**: Executed only at the beginning to build the chart.
 
+The chart units are based in the component [Chart.js](http://www.chartjs.org/) and
+each chart type contains a specific JSON structure. The best approach to build new
+chart units is to start from a template and also check the [Chart.js docs](http://www.chartjs.org/docs/latest/)
+to see every property that can be added to make the output even better for each
+situation.
+
 Let us take a look at the **Data Script**:
 
 ```python
@@ -209,16 +215,17 @@ result = {
 
 Here we can see that the reserved variable `connection` is still being used to
 retrieve data from the database. Bear in mind that this variable is always
-pointing to the current Connection. Three arrays are needed to build a set of
-values:
+pointing to the current Connection.
 
-- `data`: One value per dataset. Each dataset will be a chart dataset (a line
-in a line chart, for example);
-- `color`: One color per dataset;
-- `label`: One label per dataset.
+This template is for a Pie chart, which contains only one dataset and three arrays
+for the data:
 
-This way, `data[0]`, `color[0]` and `label[0]` refer to the first dataset, while
-`data[1]`, `color[1]` and `label[1]` refer to the second dataset, and so on.
+- `data`: One value per slice;
+- `color`: One color per slice;
+- `label`: One label per slice.
+
+This way, `data[0]`, `color[0]` and `label[0]` refer to the first slice, while
+`data[1]`, `color[1]` and `label[1]` refer to the second slice, and so on.
 
 This script must return a variable called `result` and also needs to be a JSON
 like in the above script.
