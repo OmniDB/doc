@@ -63,6 +63,30 @@ OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0
 Press Ctrl+C to exit
 ```
 
+#### OmniDB with Oracle
+
+OmniDB app and server does not require any piece of additional software, as
+explained above. But if you are going to connect to an *Oracle* database, then
+you need to download and extract *Oracle Instant Client* into OmniDB's folder
+(`/opt/omnidb-app` if you are using app version or `/opt/omnidb-server` if you
+are using server version) or into `~/lib`, depending on the operating system you
+use:
+- **MacOSX**: Download Oracle Instant Client
+([64-bit](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html))
+and extract in `~/lib`;
+- **Linux**: Download Oracle Instant Client
+([32-bit](http://www.oracle.com/technetwork/topics/linuxsoft-082809.html))
+([64-bit](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html))
+and extract it into OmniDB's folder;
+- **Windows**: Download Oracle Instant Client
+([32-bit](http://www.oracle.com/technetwork/topics/winsoft-085727.html))
+([64-bit](http://www.oracle.com/technetwork/topics/winx64soft-089540.html)) and
+extract it into OmniDB's folder.
+
+If you already have an Oracle Instant Client installed and loaded into your lib
+path, then OmniDB will be able to use it, and you will not need to download it
+and extract it into a specific folder again.
+
 #### OmniDB User Database
 
 Since version 2.4.0, upon initialization both server and app will create a file

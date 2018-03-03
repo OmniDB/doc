@@ -1,8 +1,9 @@
 # Managing Databases
 
-After creating at least one connection the user can enter the *Workspace*,
-either by clicking the *Workspace* tab or by clicking in the *Select Connection*
-action in the connections grid.
+After creating a connection you can select it by clicking in the *Select
+Connection* action in the connections grid. You will see that the connection
+will be represented by a kind of outer tab called a *Connection Tab*. And this
+whole area is called the *Workspace Window*.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_014.png)
 
@@ -12,8 +13,7 @@ This interface has several elements:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_015.png)
 
-- **1) Links**: Enables the user to navigate to the *Connections* window and
-back to the *Workspace* window
+- **1) Connections**: Opens a popup with the *Connections* grid
 - **2) Outer Tabs**: OmniDB lets you work with several databases at the same
 time. Each database will be accessible through an *outer tab*. Outer tabs also
 can host miscellaneous connection-independent features, like the *Snippets*
