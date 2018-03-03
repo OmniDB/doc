@@ -48,3 +48,13 @@ Documentation**. Also, it will redirect to the specific page considering the
 PostgreSQL version you are connected to.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_071.png)
+
+#### Snippets
+
+*Workspace Window* has a fixed outer tab with an useful feature called
+*Snippets*. With this feature you can store queries, command instructions and
+any other kinds of text you want. You can also structure the snippets in a
+directory tree the way you want. All directories and snippets you create are
+stored inside of `omnidb.db` user database and persist when you upgrade OmniDB.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_127.png)

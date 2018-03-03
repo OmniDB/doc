@@ -8,7 +8,7 @@ You don't need to login in the app version.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_003.png)
 
-The next window is the **Connections** window. We will talk about it later.
+The next window is the initial window. We will talk about it later.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_004.png)
 
@@ -39,26 +39,27 @@ Let us sign in as the user we just created.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_008.png)
 
-And we can see the **Connections** window again. Note that now there is no
-*Users* icon, because the *test* user is not a super user.
+And we can see the window again. Note that now there is no *Users* icon, because
+the *test* user is not a super user. Go ahead and click on **Connections** on
+the upper left corner. You will see a popup like this:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_009.png)
 
 #### Creating connections
 
 OmniDB C# version supported several DBMS. At the moment, OmniDB Python version,
-or `OmniDB 2.0`, supports only PostgreSQL. More DBMS support is being added as
-you read this.
+or `OmniDB 2.0`, supports only PostgreSQL and Oracle. More DBMS support is being
+added as you read this.
 
-We will now create two connections to PostgreSQL databases. To create the
-connections you have to click on the button *New Connection* and then choose the
-connection and fill the other fields. After filling all the fields for both
-connections, click on the *Save Data* button.
+We will now create two connections to PostgreSQL databases and one connection to
+an Oracle database. To create the connections you have to click on the button
+*New Connection* and then choose the connection and fill the other fields. After
+filling all the fields for both connections, click on the *Save Data* button.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_010.png)
 
 For each connection there is an *Actions* column where you can delete, test and
-select them. Go ahead and test one of the connections.
+select them. Go ahead and test one of the PostgreSQL connections.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_011.png)
 
@@ -81,5 +82,16 @@ the same popup will remain showing the error OmniDB got.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_013.png)
 
-Also, in the connections grid, if you click on the *Select Connection* action,
-OmniDB will open it in the **Workspace Window**.
+For Oracle, the behavior is similar. When OmniDB first tries to connect to an
+Oracle database without a password, you will see a message like this:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_115.png)
+
+If you have any trouble connection to your Oracle database, the same popup will
+remain showing the error OmniDB got:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_116.png)
+
+Finally, in the connections grid, if you click on the *Select Connection*
+action, OmniDB will open it in a new **Connection Outer Tab** as we can see in
+the next chapter.
