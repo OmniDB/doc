@@ -1,6 +1,6 @@
 # pglogical
 
-[pglogical](https://www.2ndquadrant.com/en/resources/pglogical/) is PostgreSQL
+[pglogical](https://www.2ndquadrant.com/en/resources/pglogical/) is a PostgreSQL
 extension that provides an advanced logical replication system that serves as a
 highly efficient method of replicating data as an alternative to physical
 replication.
@@ -17,6 +17,9 @@ max_replication_slots = 10  # one per node needed on provider node
 max_wal_senders = 10        # one per node needed on provider node
 shared_preload_libraries = 'pglogical'
 ```
+
+Also make sure to adjust file `pg_hba.conf` to grant access to `replication`
+between the 2 nodes.
 
 #### Connecting to both nodes
 
