@@ -9,7 +9,8 @@ about it, please refer to the
 
 In this chapter, we will use a 2-node cluster to demonstrate PostgreSQL 10
 native logical replication. Note that on each PostgreSQL instance, you need to
-configure `wal_level = logical`.
+configure `wal_level = logical` and also make sure to adjust file `pg_hba.conf`
+to grant access to `replication` between the 2 nodes.
 
 #### Connecting to both nodes
 
