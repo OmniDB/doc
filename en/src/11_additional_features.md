@@ -58,3 +58,31 @@ directory tree the way you want. All directories and snippets you create are
 stored inside of `omnidb.db` user database and persist when you upgrade OmniDB.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_127.png)
+
+#### Backend Management
+
+By right-clicking in the tree root node, then moving mouse pointer to
+*Monitoring* and then clicking on *Backends*, the user can see all activities
+going on in the database. Some information are hidden for normal users, only
+database superusers are allowed to see.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_174.png)
+
+By clicking in the red *X* in the *Actions* column, you can terminate the
+backend. A confirmation popup will appear.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_175.png)
+
+#### Properties and DDL
+
+By clicking on most of objects in the treeview (tables, sequences, views, roles,
+databases, etc), the user will be able to see a very comprehensive list of
+properties of the object.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_176.png)
+
+In the other panel called *DDL*, the user will be able to see the SQL DDL source
+code that can be used to re-create the object. The user can copy this text and
+paste it wherever he/she wants.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_177.png)
