@@ -86,3 +86,15 @@ code that can be used to re-create the object. The user can copy this text and
 paste it wherever he/she wants.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_177.png)
+
+#### Export Data
+
+The *Query Tab* provides a way to save data from query results into a CSV or
+XLSX file. Once you click the *Export Data* button, a cancellable backend starts
+to save data into the file. Once it is done, OmniDB provides a link called
+*Save*, so the user can download the file.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_178.png)
+
+All files are stored in a temporary folder inside OmniDB folder. OmniDB
+regularly cleans this folder, keeping only files newer than 24 hours.

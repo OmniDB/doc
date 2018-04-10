@@ -42,6 +42,9 @@ through command line with `omnidb-server`:
 
 ```bash
 user@machine:~$ omnidb-server
+Starting OmniDB websocket...
+Checking port availability...
+Starting websocket server at port 25482.
 Starting OmniDB server...
 Checking port availability...
 Starting server OmniDB 2.4.0 at 0.0.0.0:8000.
@@ -50,11 +53,14 @@ OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0
 Press Ctrl+C to exit
 ```
 
-Note how OmniDB starts a *web server* in port 8000. You can also specify
-web server port and listening address:
+Note how OmniDB starts a *websocket server* in port 25482 and a *web server* in
+port 8000. You can also specify both ports and listening address:
 
 ```bash
-user@machine:~$ omnidb-server -p 8080 -H 127.0.0.1
+user@machine:~$ omnidb-server -p 8080 -w 25000 -H 127.0.0.1
+Starting OmniDB websocket...
+Checking port availability...
+Starting websocket server at port 25000.
 Starting OmniDB server...
 Checking port availability...
 Starting server OmniDB 2.4.0 at 0.0.0.0:8080.
@@ -71,6 +77,7 @@ you need to download and extract *Oracle Instant Client* into OmniDB's folder
 (`/opt/omnidb-app` if you are using app version or `/opt/omnidb-server` if you
 are using server version) or into `~/lib`, depending on the operating system you
 use:
+
 - **MacOSX**: Download Oracle Instant Client
 ([64-bit](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html))
 and extract in `~/lib`;
@@ -100,6 +107,9 @@ the version of the user database:
 
 ```bash
 user@machine:~$ omnidb-server
+Starting OmniDB websocket...
+Checking port availability...
+Starting websocket server at port 25482.
 Starting OmniDB server...
 Checking port availability...
 Starting server OmniDB 2.4.0 at 0.0.0.0:8000.
@@ -116,9 +126,12 @@ changes version 2.5.0 requires. So you will see something like that:
 
 ```bash
 user@machine:~$ omnidb-server
+Starting OmniDB websocket...
+Checking port availability...
+Starting websocket server at port 25482.
 Starting OmniDB server...
 Checking port availability...
-Starting server OmniDB 2.4.0 at 0.0.0.0:8080.
+Starting server OmniDB 2.5.0 at 0.0.0.0:8000.
 Starting migration of user database from version 2.4.0 to version 2.5.0
 OmniDB successfully migrated user database from version 2.4.0 to version 2.5.0
 Press Ctrl+C to exit
