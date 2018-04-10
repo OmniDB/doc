@@ -48,8 +48,8 @@ the upper left corner. You will see a popup like this:
 #### Creating connections
 
 OmniDB C# version supported several DBMS. At the moment, OmniDB Python version,
-or `OmniDB 2.0`, supports only PostgreSQL and Oracle. More DBMS support is being
-added as you read this.
+or `OmniDB 2.0`, already supports PostgreSQL, Oracle, MySQL and MariaDB. More
+DBMS support is being added as you read this.
 
 We will now create two connections to PostgreSQL databases and one connection to
 an Oracle database. To create the connections you have to click on the button
