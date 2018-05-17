@@ -31,7 +31,8 @@ users. When you are done, click on the *Save Data* button inside the popup.
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_007.png)
 
 You can create as many users as you want, edit existing users and also delete
-users by clicking on the red cross at the actions column. Now you can logout.
+users by clicking on the red cross at the actions column. Now you can logout by
+clicking in the *Sign Out* button in the top right corner.
 
 #### Signing in as the new user
 
@@ -47,14 +48,14 @@ the upper left corner. You will see a popup like this:
 
 #### Creating connections
 
-OmniDB C# version supported several DBMS. At the moment, OmniDB Python version,
-or `OmniDB 2.0`, already supports PostgreSQL, Oracle, MySQL and MariaDB. More
-DBMS support is being added as you read this.
+At the moment, OmniDB supports PostgreSQL, Oracle, MySQL and MariaDB. More DBMS
+support is being added as you read this.
 
-We will now create two connections to PostgreSQL databases and one connection to
-an Oracle database. To create the connections you have to click on the button
-*New Connection* and then choose the connection and fill the other fields. After
-filling all the fields for both connections, click on the *Save Data* button.
+We will now create two connections to PostgreSQL databases one connection to an
+Oracle database and one connection to a MariaDB database. To create the
+connections you have to click on the button *New Connection* and then choose the
+connection and fill the other fields. After filling all the fields for both
+connections, click on the *Save Data* button.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_010.png)
 
@@ -92,6 +93,56 @@ remain showing the error OmniDB got:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_116.png)
 
+MariaDB and MySQL databases also works in the same way. First time, no password
+was given:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_184.png)
+
+But if you have any problems, such as database server down:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_185.png)
+
 Finally, in the connections grid, if you click on the *Select Connection*
 action, OmniDB will open it in a new **Connection Outer Tab** as we can see in
 the next chapter.
+
+#### Using SSH tunnels
+
+Starting from 2.8, OmniDB allows the user to connect to any remote database
+through SSH tunnels. The user needs to fill SSH tunnel information in each
+connection in the *Connections Grid*.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_186.png)
+
+- *SSH Server*: The server you are connecting to via SSH;
+- *SSH Port*: The port of the SSH server (default is 22, but it can be any port
+number);
+- *SSH User*: The operating system user name you use to connect to the SSH
+server;
+- *SSH Password*: The password of the operating system user. If you fill the
+field *SSH Key*, then this is optional;
+- *SSH Key*: The contents of the local private SSH key you can use to connect to
+the SSH server. If you fill this field, then you can also fill the field *SSH
+Password*, but in this case it will be the password for the SSH private key.
+
+Please note that all information is stored encrypted in your local OmniDB *User
+Database*.
+
+While using SSH tunnels, you also need to fill all database fields accordingly.
+But instead of being relative to the OmniDB server, they will be relative to the
+SSH Server. This can be done in 2 scenarios as explained below.
+
+If the database is inside the same server as you are connecting to via SSH, then
+you will have a situation like this:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/misc/ssh_tunnels_1.png)
+
+In this scenario, the database *Server* will be `127.0.0.1`, as the database is
+in the same machine as the *SSH Server*.
+
+But the database can be outside the SSH server, like this:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/misc/ssh_tunnels_2.png)
+
+Here the database *Server* needs to be `192.168.0.10`, as it is the relative
+address for the SSH server to connect to the database server.
