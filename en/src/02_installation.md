@@ -90,9 +90,9 @@ and extract it into OmniDB's folder;
 ([64-bit](http://www.oracle.com/technetwork/topics/winx64soft-089540.html)) and
 extract it into OmniDB's folder.
 
-If you already have an Oracle Instant Client installed and loaded into your lib
-path, then OmniDB will be able to use it, and you will not need to download it
-and extract it into a specific folder again.
+**Note for Windows users using OmniDB app**: For OmniDB 2.8 and above, you will
+need to extract Oracle Instant Client libraries inside of folder
+`OMNIDBAPPINSTALLFOLDER\resources\app\omnidb-server`.
 
 #### OmniDB User Database
 
