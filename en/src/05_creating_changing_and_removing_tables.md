@@ -15,14 +15,14 @@ that, the interface lets us change only table name and add new columns when
 dealing with SQLite databases (it is still not the case in OmniDB Python
 version, as it currently supports only PostgreSQL databases).
 
-We will create example tables (*Customer* and *Address*) in the `testdb`
+We will create example tables (*customers* and *addresses*) in the `testdb`
 database we connected to earlier. Right click on the **Tables** node and select
-the **Create Table** action:
+the **Create Table (GUI)** action:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_028.png)
 
-We will create the table *Customer* with a primary key that will be referenced
-by the table *Address*:
+We will create the table *customers* with a primary key that will be referenced
+by the table *addresses*:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_029.png)
 
@@ -33,7 +33,14 @@ Click on the *Save Changes* button. Right-click the *Tables* tree node and click
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_031.png)
 
-Now create the table *Address* with a primary key and a foreign key:
+By keeping the table *customers* selected in the treeview, check its properties
+and DDL:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_191.png)
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_192.png)
+
+Now create the table *addresses* with a primary key and a foreign key:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_032.png)
 
@@ -56,9 +63,9 @@ And this is what the *Complete Graph* looks like:
 #### Editing tables
 
 OmniDB also lets you edit existing tables (always following DBMS limitations).
-To test this feature we will add a new column to the table *Customer*. To access
-the alter table interface just right click the table node and select the action
-*Table Actions > Alter Table*:
+To test this feature we will add a new column to the table *customers*. To
+access the alter table interface just right click the table node and select the
+action *Table Actions > Alter Table*:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_037.png)
 
