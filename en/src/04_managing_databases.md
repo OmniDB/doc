@@ -18,16 +18,18 @@ This interface has several elements:
 time. Each database will be accessible through an *outer tab*. Outer tabs also
 can host miscellaneous connection-independent features, like the *Snippets*
 feature
-- **3) Options**: Shows the current user logged in, and also links for *user
-settings*, *query history*, *information* and *logout*.
+- **3) Options**: Shows the current user logged in, and if user is a superuser,
+also shows a link for *user management*. Also shows links for *user settings*,
+*installed plugins*, *query history*, *information* and *logout*.
 
 #### Connection Outer Tab
 
-So, the outer table named *Test* has this name because of the alias we put in
-the connection to the `testdb`. This tab is a *Connection Outer Tab*. Notice the
-little tab with a cross besides the *Test* outer tab. This allows you to create
-a new outer tab that will automatically be a *Connection Outer Tab*. However,
-the *Snippet Outer Tab* is fixed and will always be the first.
+The outer table named *PostgreSQL - testdb* has this name because of the alias
+(*PostgreSQL*) we put in the connection to the `testdb` database. This tab is a
+*Connection Outer Tab*. Notice the little tab with a cross besides the
+*PostgreSQL - testdb* outer tab. This allows you to create a new outer tab that
+will automatically be a *Connection Outer Tab*. However, the *Snippet Outer Tab*
+is fixed and will always be the first.
 
 A new *Connection Outer Tab* will always automatically point to the first
 connection on your list of database connections. Or, if you clicked on the
@@ -40,21 +42,27 @@ the elements inside of this tab:
 current one
 - **2) Tree of Structures**: Displays a hierarchical tree where you can navigate
 through the database elements
-- **3) Inner Tabs**: Allows the user to execute actions in the current database.
+- **3) Properties and DDL Panels**: Display Properties and DDL about the
+currently selected node in the tree view
+- **4) Inner Tabs**: Allows the user to execute actions in the current database.
 There are several kinds of inner tabs for the current database. By clicking on
-the last small tab with a cross, you can add a new tab. A new tab always will be
-a *Query Tab*, where you can write any kind of SQL statement
+the last small tab with a cross, you can add a new tab. A new tab can be a
+*Query Tab*, *Console Tab*, *Monitoring Dashboard* or *Backends*
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_187.png)
+
 - **4) Inner Tab Content**: Can vary depending on the kind of inner tab. The
-figure shows a *Query Tab* and in this case the content will be an *SQL
-Editor*, with syntax highlight and autocomplete
-- **5) Inner Tab Actions**: Can vary depending on the kind of inner tab. For a
-*Query Tab*, they are *Execute*, *Format*, *Explain* and *Explain Analyze*
-- **6) Inner Tab Results**: A *Query Tab*, after you click in the *Execute
-Button* or type the execute shortcut (`Alt-Q`), will show a grid with the query
+figure shows a *Query Tab* and in this case the content will be an *SQL Editor*,
+with syntax highlight, autocomplete and find & replace
+- **6) Inner Tab Actions**: Can vary depending on the kind of inner tab. For a
+*Query Tab*, they are *Run*, *Indent SQL*, *Command History*, *Explain*,
+*Explain Analyze*, *Autocommit* and *Export to File*
+- **7) Inner Tab Results**: A *Query Tab*, after you click in the *Execute
+Button* or type the run shortcut (`Alt-Q`), will show a grid with the query
 results in the *Data* subtab. If the query calls a function that raises
-messages, those will be shown in the *Messages* subtab. If instead of *Execute*
-you clicked in *Explain* or *Explain Analyze*, the explain plan for the query
-will be shown in the *Explain* subtab.
+messages, those will be shown in the *Messages* subtab. If instead of *Run* you
+clicked in *Explain* or *Explain Analyze*, the explain plan for the query will
+be shown in the *Explain* subtab.
 
 #### Working with databases
 
@@ -63,18 +71,36 @@ available connection but you can change it by clicking on the selector.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_017.png)
 
-Select the *DellStore* connection. Now go to the tree right below the selector
+Select the *PostgreSQL* connection. Now go to the tree right below the selector
 and click to expand the root node *PostgreSQL*.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_018.png)
 
 Bear in mind that every 30 minutes you keep without performing actions on the
-database, will trigger a *Authentication* popup, meaning that the password that
+database, will trigger an *Authentication* popup, meaning that the password that
 OmniDB has encrypted and stored in memory is now expired. As explained before,
 this is important for your database security. After you type the correct
 password, you will see the PostgreSQL node now shows the PostgreSQL version and
 also was expanded, showing the current database connection and also instance
 wide elements: *Databases*, *Tablespaces*, *Roles* and *Replication Slots*.
+
+You can connect to a single PostgreSQL database, and using the same connection
+you can connect to other databases in the same PostgreSQL instance. The
+currently active database will be indicated below the connection selector.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_188.png)
+
+To connect to a different database, expand the node corresponding to that
+database. A popup will appear asking if you really want to change the active
+database.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_189.png)
+
+Click on *Yes* and OmniDB will change the active database to the database you
+choose. It will be reflected on the *Active database* indicator, and also on
+the outer tab name.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_190.png)
 
 Go ahead and expand the *Schemas* node. You will see all schemas in the current
 database (in case of PostgreSQL, `TOAST` and temp schemas are not shown).
@@ -106,14 +132,14 @@ with the keyboard or mouse) and paste on any spreadsheet manager.
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_023.png)
 
 You can edit the query on the SQL editor, writing simple or more complex
-queries. To execute, click on the action button or hit the keystroke `Ctrl-Q`.
+queries. To execute, click on the action button or hit the keystroke `Alt-Q`.
 If the results exceed 50 registers, then extra buttons *Fetch More* and *Fetch
 All* will appear. More details in the next chapters.
 
 #### Working with multiple tabs inside the same connection
 
-Inside a single connection, you can create several inner tabs by clicking on the
-last little tab with a cross. Each new inner tab will be a *Query Tab*.
+Inside a single connection, you can create several inner query tabs by clicking
+on the last little tab with a cross, and then choosing *Query Tab*.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_024.png)
 

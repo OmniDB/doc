@@ -8,7 +8,7 @@ You don't need to login in the app version.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_003.png)
 
-The next window is the initial window. We will talk about it later.
+The next window is the initial window.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_004.png)
 
@@ -51,7 +51,7 @@ the upper left corner. You will see a popup like this:
 At the moment, OmniDB supports PostgreSQL, Oracle, MySQL and MariaDB. More DBMS
 support is being added as you read this.
 
-We will now create two connections to PostgreSQL databases one connection to an
+We will now create one connection to a PostgreSQL database, one connection to an
 Oracle database and one connection to a MariaDB database. To create the
 connections you have to click on the button *New Connection* and then choose the
 connection and fill the other fields. After filling all the fields for both
@@ -60,7 +60,7 @@ connections, click on the *Save Data* button.
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_010.png)
 
 For each connection there is an *Actions* column where you can delete, test and
-select them. Go ahead and test one of the PostgreSQL connections.
+select them. Go ahead and test the PostgreSQL connection.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_011.png)
 

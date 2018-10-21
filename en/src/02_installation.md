@@ -5,9 +5,9 @@ OmniDB provides 2 kinds of packages to fit every user needs:
 - **OmniDB Application**: Runs a web server on a random port behind, and
 provides a simplified web browser window to use OmniDB interface without any
 additional setup. Just feels like a desktop application.
-- **OmniDB Server**: Runs a web server on a random port. User needs to connect
-to it through a web browser. Provides user management, ideal to be hosted on a
-server on users' networks.
+- **OmniDB Server**: Runs a web server on a random port, or a port specified by
+the user. User needs to connect to it through a web browser. Provides user
+management, ideal to be hosted on a server on users' networks.
 
 Both application and server can be installed on the same machine.
 
@@ -73,10 +73,8 @@ Press Ctrl+C to exit
 
 OmniDB app and server does not require any piece of additional software, as
 explained above. But if you are going to connect to an *Oracle* database, then
-you need to download and extract *Oracle Instant Client* into OmniDB's folder
-(`/opt/omnidb-app` if you are using app version or `/opt/omnidb-server` if you
-are using server version) or into `~/lib`, depending on the operating system you
-use:
+you need to download and install *Oracle Instant Client* (or extract it to a
+specific folder, depending on the operating system you use):
 
 - **MacOSX**: Download Oracle Instant Client
 ([64-bit](http://www.oracle.com/technetwork/topics/intel-macsoft-096467.html))
@@ -84,7 +82,7 @@ and extract in `~/lib`;
 - **Linux**: Download Oracle Instant Client
 ([32-bit](http://www.oracle.com/technetwork/topics/linuxsoft-082809.html))
 ([64-bit](http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html))
-and extract it into OmniDB's folder;
+and install it on your system, then set `LD_LIBRARY_PATH`;
 - **Windows**: Download Oracle Instant Client
 ([32-bit](http://www.oracle.com/technetwork/topics/winsoft-085727.html))
 ([64-bit](http://www.oracle.com/technetwork/topics/winx64soft-089540.html)) and
@@ -142,7 +140,8 @@ Press Ctrl+C to exit
 Starting on version 2.1.0, OmniDB server comes with a configuration file
 `omnidb.conf` that enables the user to specify parameters such as port and
 listening address. Also, 2.1.0 enables us to start the server with SSL, this
-requires a certificate and is configured in the same configuration file.
+requires a certificate and is configured in the same configuration file. For
+more details about how to deploy the OmniDB server, please read Chapter 19.
 
 Starting on version 2.4.0, this file is located in
 `~/.omnidb/omnidb-server/omnidb.conf` in the user home directory.

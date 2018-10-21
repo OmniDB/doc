@@ -7,7 +7,7 @@ display the result.
 The SQL editor has a feature that helps a lot when creating new queries: SQL
 code completion. With this feature it is possible to autocomplete columns
 contained in a table referenced by an alias. To open the autocomplete interface
-you just have to type the alias and then the dot character:
+you just have to type the alias and then hit `Ctrl-Space`:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_049.png)
 
