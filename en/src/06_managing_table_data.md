@@ -18,14 +18,14 @@ limits the number of records to be displayed. The records grid has column names
 and data types. Columns that belong to the primary key have a key icon next to
 their names.
 
-The row of the grid that have the symbol `*` is the row to add new records. Let
-us insert some records in the table `Customer`:
+The row of the grid that have the symbol `+` is the row to add new records. Let
+us insert some records in the table `customers`:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_043.png)
 
 After saving, the records will be inserted and can be edited (only because this
 table has a primary key). Let’s change the *cust_name* of some of the existing
-records:
+records and, at the same time, let's remove one of the rows:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_044.png)
 

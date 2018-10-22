@@ -51,7 +51,7 @@ the last small tab with a cross, you can add a new tab. A new tab can be a
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_187.png)
 
-- **4) Inner Tab Content**: Can vary depending on the kind of inner tab. The
+- **5) Inner Tab Content**: Can vary depending on the kind of inner tab. The
 figure shows a *Query Tab* and in this case the content will be an *SQL Editor*,
 with syntax highlight, autocomplete and find & replace
 - **6) Inner Tab Actions**: Can vary depending on the kind of inner tab. For a
