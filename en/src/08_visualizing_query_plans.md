@@ -4,8 +4,8 @@ OmniDB 2.2.0 introduced a very useful feature: graphical query plan
 visualization. This may come in handy when writing or optimizing queries, since
 it allows you to easily identify performance bottlenecks in your SQL query.
 
-For this feature, *SQL Query* inner tab shows 2 buttons: *Explain* (magnifier in
-orange circle button )and *Explain Analyze* (magnifier in green circle button).
+For this feature, *SQL Query* inner tab shows 2 buttons: *Explain* and *Explain
+Analyze*.
 
 #### Textual visualization
 
