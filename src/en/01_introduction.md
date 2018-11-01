@@ -1,6 +1,6 @@
 ---
 title: "The OmniDB Handbook"
-author: [William Ivanski, Rafael Thofehrn Castro]
+author: [William Ivanski, Rafael Thofehrn Castro, Israel Barth Rubio]
 date: "2ndQuadrant"
 ...
 
