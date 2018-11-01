@@ -12,6 +12,25 @@ native logical replication. Note that on each PostgreSQL instance, you need to
 configure `wal_level = logical` and also make sure to adjust file `pg_hba.conf`
 to grant access to `replication` between the 2 nodes.
 
+
+#### Creating a test environment
+
+OmniDB repository provides a 2-node Vagrant test environment. If you want to
+use it, please do the following:
+
+```
+git clone --depth 1 https://github.com/OmniDB/OmniDB
+cd OmniDB/OmniDB_app/tests/vagrant/postgresql-10-2nodes/
+vagrant up
+```
+
+It will take a while, but once finished, 2 virtual machines with IP addresses
+`10.33.2.114` and `10.33.2.115` will be up and each of them will have PostgreSQL
+10 listening to port `5432`, with all settings needed to configure native
+logical replication. A new database called `omnidb_tests` is also created on
+both machines. To connect, user is `omnidb` and password is `omnidb`.
+
+
 #### Connecting to both nodes
 
 Let's use OmniDB to connect to both PostgreSQL nodes. First of all, fill out
@@ -26,6 +45,7 @@ called *Logical Replication*. Inside of it, we can see *Publications* and
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_118.png)
 
+
 #### Creating a test table on both nodes
 
 On both nodes, create a table like this:
@@ -39,6 +59,7 @@ CREATE TABLE customers (
 ```
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_119.png)
+
 
 #### Create a publication on the first machine
 
@@ -55,6 +76,7 @@ a new node with the same name you gave to the publication. Expanding this node,
 you will see the details and the tables for the publication:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_121.png)
+
 
 #### Create a subscription on the second machine
 
@@ -77,6 +99,7 @@ Also, the `CREATE SUBSCRIPTION` command created a *logical replication slot*
 called `testsub` (the same name as the subscription) in the first machine:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_124.png)
+
 
 #### Testing the logical replication
 
