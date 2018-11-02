@@ -20,11 +20,21 @@ Usage: omnidb-config-app [options]
 Options:
   --version             show program\'s version number and exit
   -h, --help            show this help message and exit
+  -d HOMEDIR, --homedir=HOMEDIR
+                        home directory containing local databases config and
+                        log files
   -c username password, --createsuperuser=username password
                         create super user: -c username password
   -a, --vacuum          databases maintenance
-  -r, --resetdatabase   reset databases
+  -r, --resetdatabase   reset user and session databases
+  -t, --deletetemp      delete temporary files
 ```
+
+#### Set home directory
+
+Option `-d` allows you to set the path to the OmniDB folder that contains the
+config and database files where you want to execute other options, like creating
+a new super user (`-c`).
 
 #### Create super user
 
@@ -70,5 +80,16 @@ Cleaning sessions...
 Vacuuming OmniDB database...
 Done.
 Vacuuming Sessions database...
+Done.
+```
+
+#### Delete temporary files
+
+If you desire to remove temporary files that OmniDB creates along its execution,
+like exported queries in CSV/XLSX format, you can use the `-t` option.
+
+```bash
+user@machine:~$ omnidb-config-app -t
+Cleaning temp folder...
 Done.
 ```
