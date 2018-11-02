@@ -1,11 +1,11 @@
 # Managing other Elements
 
-With the exception of tables, all PostgreSQL structures are possible to be
-managed with the use of *SQL templates*. This gives the user more power than
-using graphical forms to manipulate structures.
+All PostgreSQL structures are possible to be managed with the use of
+*SQL templates*. This gives the user more power than using graphical forms to
+manipulate structures.
 
 For example, let's consider the sequences inside the schema `public` of the
-database `testdb`. To create a new sequence, right click on the *Sequences*
+database `ds2`. To create a new sequence, right click on the *Sequences*
 node, and choose *Create Sequence*.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_062.png)
