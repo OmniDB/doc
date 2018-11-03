@@ -11,7 +11,7 @@ application). While you always could develop and manage your own functions
 within OmniDB, it is a recent feature that allows you to also *debug* your own
 functions.
 
-OmniDB 2.3.0 introduces this great feature: a debugger for PL/pgSQL functions.
+OmniDB 2.3.0 introduced this great feature: a debugger for PL/pgSQL functions.
 It was implemented by scratch and takes advantage of hooks, an extensibility in
 PostgreSQL’s source code that allows us to perform custom actions when specific
 events are triggered in the database. For the debugger we use hooks that are
@@ -27,7 +27,7 @@ For more details on the installation, please refer to the
 Also please read the notes in this document, to be aware that currently there
 are some limitations.
 
-After successfully installing the debugger, you will se a schema called `omnidb`
+After successfully installing the debugger, you will see a schema called `omnidb`
 in your database. Also, if you compiled the debugger yourself, you can install
 it as a PostgreSQL extension, and in this case it will appear under the
 *Extensions* tree node.
@@ -102,10 +102,10 @@ Note how the query returns a single value, containing the number of vowels in
 the text. Note also how the query took several seconds to finish; this is caused
 by the `pg_sleep` we put in the source code of the function `fnc_count_vowels`.
 
-By right-clicking the function node, you can see there are actions to edit and
-drop it. As you probably guessed, each action will open SQL Query inner tabs
-with handy SQL templates in them. But the most interesting action right now is
-*Debug Function*. Go ahead and click it!
+By right-clicking the function node, you can see there are actions to edit,
+select and drop it. As you probably guessed, each action will open SQL Query
+inner tabs with handy SQL templates in them. But the most interesting action
+right now is *Debug Function*. Go ahead and click it!
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_077.png)
 
