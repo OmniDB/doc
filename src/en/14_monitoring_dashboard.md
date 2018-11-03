@@ -1,4 +1,4 @@
-OmniDB 2.4.0 introduces a new cool feature called *Monitoring Dashboard*. We
+OmniDB 2.4.0 introduced a new cool feature called *Monitoring Dashboard*. We
 know a picture is worth a thousand words, so please take a look:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_091.png)
