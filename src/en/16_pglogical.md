@@ -21,6 +21,55 @@ shared_preload_libraries = 'pglogical'
 Also make sure to adjust file `pg_hba.conf` to grant access to `replication`
 between the 2 nodes.
 
+
+#### Creating a test environment
+
+OmniDB repository provides a 2-node Vagrant test environment. If you want to
+use it, please do the following:
+
+```
+git clone --depth 1 https://github.com/OmniDB/OmniDB
+cd OmniDB/OmniDB_app/tests/vagrant/pglogical-2-postgresql-10-2nodes/
+vagrant up
+```
+
+It will take a while, but once finished, 2 virtual machines with IP addresses
+`10.33.3.114` and `10.33.3.115` will be up and each of them will have PostgreSQL
+10 listening to port `5432`, with all settings needed to configure pglogical
+replication. A new database called `omnidb_tests` is also created on
+both machines. To connect, user is `omnidb` and password is `omnidb`.
+
+
+#### Install OmniDB pglogical plugin
+
+OmniDB core does not support pglogical by default. You will need to download and
+install pglogical plugin. If you are using OmniDB server, these are the steps:
+
+```
+wget https://omnidb.org/dist/plugins/omnidb-pglogical_1.0.0.zip
+unzip omnidb_pglogical_1.0.0.zip
+sudo cp -r plugins/ static/ /opt/omnidb-server/OmniDB_app/
+sudo systemctl restart omnidb
+```
+
+And then refresh the OmniDB web page in the browser.
+
+For OmniDB app, these are the steps:
+
+```
+wget https://omnidb.org/dist/plugins/omnidb-pglogical_1.0.0.zip
+unzip omnidb_pglogical_1.0.0.zip
+sudo cp -r plugins/ static/ /opt/omnidb-app/resources/app/omnidb-server/OmniDB_app/
+```
+
+And then restart OmniDB app.
+
+If everything worked correctly, by clicking on the "plugins" icon in the top
+right corner, you will see the plugin installed and enabled:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_193.png)
+
+
 #### Connecting to both nodes
 
 Let's use OmniDB to connect to both PostgreSQL nodes. First of all, fill out
@@ -29,6 +78,7 @@ connection info in the connection grid:
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_128.png)
 
 Then select both connections.
+
 
 #### Create pglogical extension in both nodes
 
