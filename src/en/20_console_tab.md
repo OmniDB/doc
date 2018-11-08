@@ -17,14 +17,14 @@ The editor on the bottom of the tab area is full-featured just like the *Query
 Tab* editor (it provides syntax highlight and autocomplete with *Ctrl-Space*).
 To execute a command, just type it in this editor. If the command is a backslash
 (starts with `\`), just type `Enter` and it will be executed. If it is a regular
-SQL command, then it can be multi-lined, and you will need to type *Ctrl-Q* to
+SQL command, then it can be multi-lined, and you will need to type *Alt-Q* to
 execute it.
 
 All commands and its output will be logged into the display area, which is
 textual and read-only, so you can copy and paste its contents somewhere else.
 You can clear the display area by clicking on the *Clear Console* button.
 
-All commands also are logged in the global OmniDB query history, and also in a
+All commands also are logged in the connection query history, and also in a
 local console history, which you can by clicking in the *Command History*
 button.
 

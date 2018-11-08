@@ -56,9 +56,9 @@ backend. A confirmation popup will appear.
 
 #### Properties and DDL
 
-By clicking on most of objects in the tree view (tables, sequences, views, roles,
-databases, etc), the user will be able to see a very comprehensive list of
-properties of the object.
+By clicking on most of objects in the tree view (tables, sequences, views,
+roles, databases, etc), the user will be able to see a very comprehensive list
+of properties of the object.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_176.png)
 

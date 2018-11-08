@@ -173,11 +173,11 @@ The source code of this kind of unit is more complex. There are two scripts:
 - **Data Script**: Executed every time the unit is refreshed;
 - **Chart Script**: Executed only at the beginning to build the chart.
 
-The chart units are based in the component [Chart.js](http://www.chartjs.org/) and
-each chart type contains a specific JSON structure. The best approach to build new
-chart units is to start from a template and also check the [Chart.js docs](http://www.chartjs.org/docs/latest/)
-to see every property that can be added to make the output even better for each
-situation.
+The chart units are based in the component [Chart.js](http://www.chartjs.org/)
+and each chart type contains a specific JSON structure. The best approach to
+build new chart units is to start from a template and also check the
+[Chart.js docs](http://www.chartjs.org/docs/latest/) to see every property that
+can be added to make the output even better for each situation.
 
 Let us take a look at the **Data Script**:
 
