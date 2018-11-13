@@ -14,7 +14,7 @@ tree nodes and calling python functions in the plugin's python code.
 Here is an example of a plugin that adds the Test action into the inner tab +
 context menu:
 
-![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_194.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_195.png)
 
 For more details about the Plugin system, instructions on how to install and also
 to develop plugins, please refer to the github page:
