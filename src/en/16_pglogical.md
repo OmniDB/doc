@@ -96,6 +96,7 @@ However, pglogical is not active yet.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_130.png)
 
+
 #### Create pglogical nodes
 
 To activate pglogical in this database, we need to create a pglogical node on
@@ -119,6 +120,7 @@ replication sets are already created: *ddl_sql*, *default* and
 Now create a node on the other machine too. Choose a different name for the
 node.
 
+
 #### Create a table on the first machine
 
 In the first machine, under the *Schemas* node, expand the *public* node, then
@@ -129,6 +131,7 @@ the *Constraints* tab. When done, click in the *Save Changes* button.
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_133.png)
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_134.png)
+
 
 #### Add the new table to a replication set on the first machine
 
@@ -142,6 +145,7 @@ command.
 Refresh the *Tables* node to check the table was added to the replication set.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_136.png)
+
 
 #### Add a subscription on the second machine
 
@@ -162,6 +166,7 @@ second machine:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_139.png)
 
+
 #### Add some data in the table on the first machine
 
 In the first machine, under the *Schemas* node, expand the *public* node and
@@ -176,6 +181,7 @@ right-click the table, move the mouse pointer to *Data Actions* and then click
 on *Query Data*.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_141.png)
+
 
 #### Check if delete is being replicated
 
