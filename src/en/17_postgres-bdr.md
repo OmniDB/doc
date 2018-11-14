@@ -20,6 +20,55 @@ shared_preload_libraries = 'bdr'
 Also make sure to adjust file `pg_hba.conf` to grant access to `replication`
 between the 2 nodes.
 
+
+#### Creating a test environment
+
+OmniDB repository provides a 2-node Vagrant test environment. If you want to
+use it, please do the following:
+
+```
+git clone --depth 1 https://github.com/OmniDB/OmniDB
+cd OmniDB/OmniDB_app/tests/vagrant/postgresql-bdr-9.4-2nodes/
+vagrant up
+```
+
+It will take a while, but once finished, 2 virtual machines with IP addresses
+`10.33.4.114` and `10.33.4.115` will be up and each of them will have PostgreSQL
+10 listening to port `5432`, with all settings needed to configure BDR
+multi-master replication. A new database called `omnidb_tests` is also created
+on both machines. To connect, user is `omnidb` and password is `omnidb`.
+
+
+#### Install OmniDB BDR plugin
+
+OmniDB core does not support BDR by default. You will need to download and
+install BDR plugin. If you are using OmniDB server, these are the steps:
+
+```
+wget https://omnidb.org/dist/plugins/omnidb-bdr_1.0.0.zip
+unzip omnidb_bdr_1.0.0.zip
+sudo cp -r plugins/ static/ /opt/omnidb-server/OmniDB_app/
+sudo systemctl restart omnidb
+```
+
+And then refresh the OmniDB web page in the browser.
+
+For OmniDB app, these are the steps:
+
+```
+wget https://omnidb.org/dist/plugins/omnidb-bdr_1.0.0.zip
+unzip omnidb_bdr_1.0.0.zip
+sudo cp -r plugins/ static/ /opt/omnidb-app/resources/app/omnidb-server/OmniDB_app/
+```
+
+And then restart OmniDB app.
+
+If everything worked correctly, by clicking on the "plugins" icon in the top
+right corner, you will see the plugin installed and enabled:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_201.png)
+
+
 #### Connecting to both nodes
 
 Let's use OmniDB to connect to both PostgreSQL nodes. First of all, fill out
@@ -28,6 +77,7 @@ connection info in the connection grid:
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_144.png)
 
 Then select both connections.
+
 
 #### Create required extensions
 
@@ -40,6 +90,7 @@ EXTENSION` command ready for you to make some adjustments and run:
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_145.png)
 
 You need to create both extensions `btree_gist` and `bdr` on both nodes.
+
 
 #### Create the BDR group in the first node
 
@@ -64,6 +115,7 @@ If you expand *Nodes*, you will see that this BDR group has only 1 node:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_148.png)
 
+
 #### Join the BDR group in the second node
 
 Now let's move to the other node. You can see that BDR is installed but not
@@ -76,6 +128,7 @@ And now we can see that the second node has BDR active, his name in the BDR
 group is `node2`, and now the BDR group has 2 nodes:
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_150.png)
+
 
 #### Creating a table in the first node
 
@@ -94,6 +147,7 @@ are masters.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_152.png)
 
+
 #### Adding some data in the second node
 
 While you are at the second node, right click the table `bdrtest`, point to
@@ -107,6 +161,7 @@ then click in *Query Data*. See how the rows created in `node2` were
 automatically replicated into `node1`.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_154.png)
+
 
 #### Adding some data in the first node
 

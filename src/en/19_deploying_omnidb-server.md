@@ -251,7 +251,7 @@ server {
 }
 ```
 
-As can be seen, Nginx is listenning for requests to `domain.org` in port 443.
+As can be seen, Nginx is listening for requests to `domain.org` in port 443.
 Since we also specified the external websocket port to 443, websocket requests
 will be dealt here too.
 
