@@ -46,7 +46,7 @@ install BDR plugin. If you are using OmniDB server, these are the steps:
 
 ```
 wget https://omnidb.org/dist/plugins/omnidb-bdr_1.0.0.zip
-unzip omnidb_bdr_1.0.0.zip
+unzip omnidb-bdr_1.0.0.zip
 sudo cp -r plugins/ static/ /opt/omnidb-server/OmniDB_app/
 sudo systemctl restart omnidb
 ```
@@ -57,7 +57,7 @@ For OmniDB app, these are the steps:
 
 ```
 wget https://omnidb.org/dist/plugins/omnidb-bdr_1.0.0.zip
-unzip omnidb_bdr_1.0.0.zip
+unzip omnidb-bdr_1.0.0.zip
 sudo cp -r plugins/ static/ /opt/omnidb-app/resources/app/omnidb-server/OmniDB_app/
 ```
 

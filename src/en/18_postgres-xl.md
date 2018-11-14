@@ -5,14 +5,15 @@
 parallel database built on top of PostgreSQL, and it is designed to be
 horizontally scalable and flexible enough to handle various workloads.
 
-In this chapter, we will use a cluster with 1 GTM and 1 coordinator on the same
-virtual machine, and 2 data nodes (each data node on a separate virtual machine).
+In this chapter, we will use a cluster with 4 virtual machines: 1 GTM, 1
+coordinator and 2 data nodes.
 
 | Machine | IP | Role |
 |---|---|---|---|
-| xl_gtmcoord | 192.168.56.105 | GTM and coordinator |
-| xl_datanode1 | 192.168.56.106 | data node |
-| xl_datanode2 | 192.168.56.107 | data node |
+| xlgtm | 10.33.1.114 | GTM |
+| xlcoord | 10.33.1.115 | coordinator |
+| xldata1 | 10.33.1.116 | data node |
+| xldata2 | 10.33.1.117 | data node |
 
 On each machine, you need to clone Postgres-XL repository and compile it. You
 also need to set specific XL parameters on file `postgresql.conf` and make sure
@@ -21,44 +22,73 @@ More information on how Postgres-XL works and how to install it on
 [Postgres-XL documentation](https://www.postgres-xl.org/documentation/index.html).
 You can also refer to [this blog post](https://blog.2ndquadrant.com/postgres-xl-omnidb/).
 
-#### Preparing the nodes
 
-After you have XL up and running on all nodes, you need to let them know about
-their roles in the cluster and also about the other nodes. On the
-GTM/coordinator node, run the following as `postgres` user:
+#### Creating a test environment
 
-```sql
-ALTER NODE coord1 WITH (TYPE = 'coordinator', HOST = 'localhost', PORT = 5432);
-CREATE NODE datanode_1 WITH (TYPE = 'datanode', HOST = '192.168.56.106', PORT = 5432);
-CREATE NODE datanode_2 WITH (TYPE = 'datanode', HOST = '192.168.56.107', PORT = 5432);
-SELECT pgxc_pool_reload();
+OmniDB repository provides a 4-node Vagrant test environment. If you want to
+use it, please do the following:
+
+```
+git clone --depth 1 https://github.com/OmniDB/OmniDB
+cd OmniDB/OmniDB_app/tests/vagrant/xl-9.5/
+vagrant up
 ```
 
-On the first data node, run:
+It will take a while, but once finished, 4 virtual machines with IP addresses
+`10.33.1.114`, `10.33.1.115`, `10.33.1.116` and `10.33.1.117` will be up and
+each of them will have Postgres-XL 9.5 up and listening to port `5432`, with all
+settings needed. To create all nodes, please do:
 
-```sql
-ALTER NODE datanode_1 WITH (TYPE = 'datanode', HOST = 'localhost', PORT = 5432);
-CREATE NODE coord1 WITH (TYPE = 'coordinator', HOST = '192.168.56.105', PORT = 5432);
-CREATE NODE datanode_2 WITH (TYPE = 'datanode', HOST = '192.168.56.107', PORT = 5432);
-SELECT pgxc_pool_reload();
+```
+vagrant ssh xlcoord -c '/vagrant/setup.sh 10.33.1.115 10.33.1.116 10.33.1.117'
+vagrant ssh xldata1 -c '/vagrant/setup.sh 10.33.1.115 10.33.1.116 10.33.1.117'
+vagrant ssh xldata2 -c '/vagrant/setup.sh 10.33.1.115 10.33.1.116 10.33.1.117'
 ```
 
-On the second data node, run:
+Then connect to the coordinator and define a password for the `postgres` user:
 
-```sql
-ALTER NODE datanode_2 WITH (TYPE = 'datanode', HOST = 'localhost', PORT = 5432);
-CREATE NODE coord1 WITH (TYPE = 'coordinator', HOST = '192.168.56.105', PORT = 5432);
-CREATE NODE datanode_1 WITH (TYPE = 'datanode', HOST = '192.168.56.106', PORT = 5432);
-SELECT pgxc_pool_reload();
+```
+$ vagrant ssh xlcoord -c 'sudo su - postgres -c /usr/local/pgsql/bin/psql'
+psql (PGXL 9.5r1.6, based on PG 9.5.12 (Postgres-XL 9.5r1.6))
+Type "help" for help.
+
+postgres=# ALTER USER postgres PASSWORD 'omnidb';
+ALTER ROLE
+postgres=#
 ```
 
-Finally, on the GTM/coordinator, change password of user `postgres` and create a
-database:
+Now the XL cluster will be ready for you to use.
 
-```sql
-ALTER USER postgres WITH PASSWORD 'omnidb';
-CREATE DATABASE omnidb_tests;
+
+#### Install OmniDB XL plugin
+
+OmniDB core does not support XL by default. You will need to download and
+install XL plugin. If you are using OmniDB server, these are the steps:
+
 ```
+wget https://omnidb.org/dist/plugins/omnidb-xl_1.0.0.zip
+unzip omnidb-xl_1.0.0.zip
+sudo cp -r plugins/ static/ /opt/omnidb-server/OmniDB_app/
+sudo systemctl restart omnidb
+```
+
+And then refresh the OmniDB web page in the browser.
+
+For OmniDB app, these are the steps:
+
+```
+wget https://omnidb.org/dist/plugins/omnidb-xl_1.0.0.zip
+unzip omnidb-xl_1.0.0.zip
+sudo cp -r plugins/ static/ /opt/omnidb-app/resources/app/omnidb-server/OmniDB_app/
+```
+
+And then restart OmniDB app.
+
+If everything worked correctly, by clicking on the "plugins" icon in the top
+right corner, you will see the plugin installed and enabled:
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_202.png)
+
 
 #### Connecting to the cluster
 
