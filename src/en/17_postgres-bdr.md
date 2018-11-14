@@ -66,7 +66,7 @@ And then restart OmniDB app.
 If everything worked correctly, by clicking on the "plugins" icon in the top
 right corner, you will see the plugin installed and enabled:
 
-![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_194.png)
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_201.png)
 
 
 #### Connecting to both nodes
