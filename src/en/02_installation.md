@@ -14,7 +14,7 @@ Both application and server can be installed on the same machine.
 #### OmniDB Application
 
 In order to run OmniDB app, you don't need to install any additional piece of
-software. Just head to [omnidb.org](omnidb.org) and download the latest package
+software. Just head to [omnidb.org](https://omnidb.org/) and download the latest package
 for your specific operating system and architecture:
 
 - Linux 32 bits / 64 bits
