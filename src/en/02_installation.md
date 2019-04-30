@@ -1,4 +1,4 @@
-# Installation
+# 2. Installation
 
 OmniDB provides 2 kinds of packages to fit every user needs:
 

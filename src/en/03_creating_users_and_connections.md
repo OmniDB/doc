@@ -1,4 +1,4 @@
-# Creating Users and Connections
+# 3. Creating Users and Connections
 
 #### Logging in as user *admin*
 

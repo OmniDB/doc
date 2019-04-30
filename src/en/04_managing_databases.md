@@ -1,4 +1,4 @@
-# Managing Databases
+# 4. Managing Databases
 
 After creating a connection you can select it by clicking in the *Select
 Connection* action in the connections grid. You will see that the connection

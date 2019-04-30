@@ -1,4 +1,4 @@
-# Managing other Elements
+# 10. Managing other Elements
 
 All PostgreSQL structures are possible to be managed with the use of
 *SQL templates*. This gives the user more power than using graphical forms to

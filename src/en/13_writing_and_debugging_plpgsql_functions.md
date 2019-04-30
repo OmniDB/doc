@@ -1,4 +1,4 @@
-# Writing and Debugging PL/pgSQL Functions
+# 13. Writing and Debugging PL/pgSQL Functions
 
 #### Introduction
 

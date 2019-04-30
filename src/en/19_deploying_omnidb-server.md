@@ -1,4 +1,4 @@
-# Deploying omnidb-server
+# 19. Deploying omnidb-server
 
 Whenever deploying omnidb-server the user must be aware of how OmniDB works in
 terms of ports so the environment can be properly configured taking the

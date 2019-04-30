@@ -1,4 +1,4 @@
-# Writing SQL Queries
+# 7. Writing SQL Queries
 
 The most common kind of inner tab is the *Query Tab*, containing the following
 elements:

@@ -1,4 +1,4 @@
-# Logical Replication
+# 15. Logical Replication
 
 PostgreSQL 10 introduces native logical replication, which uses a
 publish/subscribe model and so we can create publications on the upstream (or

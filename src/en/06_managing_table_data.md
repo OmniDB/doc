@@ -1,4 +1,4 @@
-# Managing Table Data
+# 6. Managing Table Data
 
 The tool allows us to edit records contained in tables through a very simple and
 intuitive interface. Given that only a few DBMS have unique identifiers for

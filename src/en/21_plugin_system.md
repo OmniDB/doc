@@ -1,4 +1,4 @@
-# Plugin System
+# 21. Plugin System
 
 OmniDB 2.9 introduces the plugin system, a feature that allows users to develop and
 share their own features that can be plugged into OmniDB without having to deploy
