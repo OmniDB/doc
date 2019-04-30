@@ -1,9 +1,3 @@
----
-title: "The OmniDB Handbook"
-author: [William Ivanski, Rafael Thofehrn Castro, Israel Barth Rubio]
-date: "2ndQuadrant"
-...
-
 # 1. Introduction
 
 **OmniDB** is an open source browser-based app designed to access and manage
