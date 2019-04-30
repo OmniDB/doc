@@ -1,4 +1,4 @@
-# Visualizing Query Plans
+# 8. Visualizing Query Plans
 
 OmniDB 2.2.0 introduced a very useful feature: graphical query plan
 visualization. This may come in handy when writing or optimizing queries, since

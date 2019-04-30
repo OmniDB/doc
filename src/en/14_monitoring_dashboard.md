@@ -1,4 +1,4 @@
-# Monitoring Dashboard
+# 14. Monitoring Dashboard
 
 OmniDB 2.4.0 introduced a new cool feature called *Monitoring Dashboard*. We
 know a picture is worth a thousand words, so please take a look:

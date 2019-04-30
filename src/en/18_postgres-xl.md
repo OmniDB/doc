@@ -1,4 +1,4 @@
-# Postgres-XL
+# 18. Postgres-XL
 
 [Postgres-XL](https://www.2ndquadrant.com/en/resources/postgres-xl/) (or just
 **XL**, for short) is an open source project from 2ndQuadrant. It is a massively

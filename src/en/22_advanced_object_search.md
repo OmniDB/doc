@@ -1,4 +1,4 @@
-# Advanced Object Search
+# 22. Advanced Object Search
 
 OmniDB 2.9 introduces the a Advanced Object Search feature, allowing users to
 use an advanced pattern matching to search database objects and tables data. The

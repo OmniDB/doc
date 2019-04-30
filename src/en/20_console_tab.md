@@ -1,4 +1,4 @@
-# Console Tab
+# 20. Console Tab
 
 Introduced in OmniDB 2.6.0, the new OmniDB Console Tab provides an easy and
 confortable way to interact with your databases. Users familiar with the `psql`

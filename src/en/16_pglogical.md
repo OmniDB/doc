@@ -1,4 +1,4 @@
-# pglogical
+# 16. pglogical
 
 [pglogical](https://www.2ndquadrant.com/en/resources/pglogical/) is a PostgreSQL
 extension that provides an advanced logical replication system that serves as a

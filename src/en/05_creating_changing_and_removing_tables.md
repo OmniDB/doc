@@ -1,4 +1,4 @@
-# Creating, Changing and Removing Tables
+# 5. Creating, Changing and Removing Tables
 
 #### Creating tables
 
