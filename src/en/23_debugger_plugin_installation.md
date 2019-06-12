@@ -1,4 +1,4 @@
-# Debugger Plugin Installation
+# 23. Debugger Plugin Installation
 
 - [1- Linux Installation](#1-linux-installation)
 - [2- Windows Installation](#2-windows-installation)
