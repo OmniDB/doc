@@ -86,3 +86,9 @@ From the *Query Tab* you can click on the *Command History* button to see a
 full, browsable and searchable query tab.
 
 ![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_203.png)
+
+#### SSH Console
+
+OmniDB also provides a full-featured SSH Console.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_204.png)
