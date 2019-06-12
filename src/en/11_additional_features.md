@@ -79,3 +79,10 @@ to save data into the file. Once it is done, OmniDB provides a link called
 
 All files are stored in a temporary folder inside OmniDB folder. OmniDB
 regularly cleans this folder, keeping only files newer than 24 hours.
+
+#### Query History
+
+From the *Query Tab* you can click on the *Command History* button to see a
+full, browsable and searchable query tab.
+
+![](https://raw.githubusercontent.com/OmniDB/doc/master/img/image_203.png)
