@@ -27,6 +27,7 @@ The OmniDB Handbook
    en/20_console_tab.md
    en/21_plugin_system.md
    en/22_advanced_object_search.md
+   en/23_debugger_plugin_installation.md
 
 Indices and tables
 ==================

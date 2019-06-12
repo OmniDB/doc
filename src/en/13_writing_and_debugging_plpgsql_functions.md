@@ -23,9 +23,9 @@ with special tables to control the whole debugging process. This can be manually
 created or with an extension.
 
 For more details on the installation, please refer to the
-[instructions](https://github.com/OmniDB/OmniDB/blob/master/omnidb_plugin/README.md).
-Also please read the notes in this document, to be aware that currently there
-are some limitations.
+[instructions](https://github.com/OmniDB/OmniDB/blob/master/omnidb_plugin/README.md),
+also available in Chapter 23. Also please read the notes in this document, to be
+aware that currently there are some limitations.
 
 After successfully installing the debugger, you will see a schema called `omnidb`
 in your database. Also, if you compiled the debugger yourself, you can install
