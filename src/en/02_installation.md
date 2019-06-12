@@ -17,10 +17,10 @@ In order to run OmniDB app, you don't need to install any additional piece of
 software. Just head to [omnidb.org](https://omnidb.org/) and download the latest package
 for your specific operating system and architecture:
 
-- Linux 32 bits / 64 bits
+- Linux 64 bits
     - DEB installer
     - RPM installer
-- Windows 32 bits / 64 bits
+- Windows 64 bits
     - EXE installer
 - Mac OSX
     - DMG installer
