@@ -2,9 +2,9 @@
 
 OmniDB provides 2 kinds of packages to fit every user needs:
 
-- **OmniDB Application**: Runs a web server on a random port behind, and
-provides a simplified web browser window to use OmniDB interface without any
-additional setup. Just feels like a desktop application.
+- **OmniDB Application**: Runs a web server on a random port, and provides a simplified
+web browser window to use OmniDB interface without any additional setup. Just feels
+like a desktop application.
 - **OmniDB Server**: Runs a web server on a random port, or a port specified by
 the user. User needs to connect to it through a web browser. Provides user
 management, ideal to be hosted on a server on users' networks.
@@ -41,31 +41,32 @@ Use the specific installer for your Operational System and it will be available
 through command line with `omnidb-server`:
 
 ```bash
-user@machine:~$ omnidb-server
-Starting OmniDB websocket...
-Checking port availability...
-Starting websocket server at port 25482.
 Starting OmniDB server...
+Running database migrations...
+Operations to perform:
+  Apply all migrations: OmniDB_app, admin, auth, contenttypes, sessions, social_django
+Running migrations:
+  No migrations to apply.
 Checking port availability...
-Starting server OmniDB 2.4.0 at 0.0.0.0:8000.
-Starting migration of user database from version 0.0.0 to version 2.4.0
-OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0
+Starting server OmniDB 3.0.0b at 127.0.0.1:8000.
+Open OmniDB in your favorite browser
 Press Ctrl+C to exit
 ```
 
-Note how OmniDB starts a *websocket server* in port 25482 and a *web server* in
-port 8000. You can also specify both ports and listening address:
+Note how OmniDB starts a *web server* in port 8000. You can also specify both ports
+and listening address:
 
 ```bash
-user@machine:~$ omnidb-server -p 8080 -w 25000 -H 127.0.0.1
-Starting OmniDB websocket...
-Checking port availability...
-Starting websocket server at port 25000.
+user@machine:~$ omnidb-server -p 8080 -H 0.0.0.0
 Starting OmniDB server...
+Running database migrations...
+Operations to perform:
+  Apply all migrations: OmniDB_app, admin, auth, contenttypes, sessions, social_django
+Running migrations:
+  No migrations to apply.
 Checking port availability...
-Starting server OmniDB 2.4.0 at 0.0.0.0:8080.
-Starting migration of user database from version 0.0.0 to version 2.4.0
-OmniDB successfully migrated user database from version 0.0.0 to version 2.4.0
+Starting server OmniDB 3.0.0b at 0.0.0.0:8080.
+Open OmniDB in your favorite browser
 Press Ctrl+C to exit
 ```
 
