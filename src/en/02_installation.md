@@ -38,6 +38,7 @@ Use the specific installer for your Operating System and it will be available
 through command line with `omnidb-server`:
 
 ```bash
+user@machine:~$ omnidb-server
 Starting OmniDB server...
 Running database migrations...
 Operations to perform:
@@ -50,7 +51,7 @@ Open OmniDB in your favorite browser
 Press Ctrl+C to exit
 ```
 
-Note how OmniDB starts a *web server* in port 8000. You can also specify both ports
+Note how OmniDB starts a *web server* in port 8000. You can also specify port
 and listening address:
 
 ```bash
