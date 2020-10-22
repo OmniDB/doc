@@ -1,4 +1,4 @@
-# 5. Accessing OmniDB
+# 6. Accessing OmniDB
 
 OmniDB comes only with the user *admin*. If you are using the server version,
 the first thing to do is sign in as *admin*, the default password is *admin*.
