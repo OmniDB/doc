@@ -148,8 +148,7 @@ environment.
 value is `127.0.0.1`.
 
 - `LISTENNING_PORT`: specifies in what port OmniDB server will listen, this is the port used
-in the browser's URL if OmniDB is being accessed directly. The default value is
-8000.
+in the browser's URL if OmniDB is being accessed directly. The default value is `8000`.
 
 - `CUSTOM_PATH`: specifies a custom path to access OmniDB in the browser URL. The
 default value is empty, meaning that no custom path is used. If user specifies `'test'`
