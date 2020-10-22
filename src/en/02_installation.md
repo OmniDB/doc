@@ -11,7 +11,7 @@ on a server on users' networks.
 
 Both application and server can be installed on the same machine.
 
-#### OmniDB Application
+## 2.1. OmniDB Application
 
 In order to run OmniDB app, you don't need to install any additional piece of
 software. Just head to [omnidb.org](https://omnidb.org/) and download the latest package
@@ -29,7 +29,7 @@ Use the specific installer for your Operating System and it will be available
 through your desktop environment application menu or via command line with
 `omnidb-app`.
 
-#### OmniDB Server
+## 2.2. OmniDB Server
 
 Like OmniDB app, OmniDB server doesn't require any additional piece of software
 and the same options for operating system and architecture are provided.
@@ -71,7 +71,7 @@ Press Ctrl+C to exit
 OmniDB will be accessible with any browser using the address displayed in the startup
 message.
 
-#### OmniDB with Oracle
+## 2.3. OmniDB with Oracle
 
 OmniDB app and server does not require any piece of additional software, as
 explained above. But if you are going to connect to an *Oracle* database, then

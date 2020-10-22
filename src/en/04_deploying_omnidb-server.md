@@ -15,7 +15,7 @@ Regardless of what method is used, it is **EXTREMELY** important that environmen
 is configured so that communication between users browsers and the machine hosting
 OmniDB (or the intermediate application) is encrypted.
 
-#### omnidb-server Post Installation
+## 4.1. omnidb-server Post Installation
 
 After installing `omnidb-server` in your preferred Linux distro, a service will
 be automatically configured.
@@ -31,7 +31,7 @@ file if deploying OmniDB using the service.
 If you're not using the service, edit the file that was created following the
 guidelines present in the third chapter (`omnidb-server` Usability).
 
-#### Deploying OmniDB directly
+## 4.2. Deploying OmniDB directly
 
 In this case no reverse proxies are used, OmniDB is accessed directly.
 
@@ -52,7 +52,7 @@ url: `https://mydomain.com:PORT`
 Authentication and database settings explained in the third chapter can also be
 configured according to the needs.
 
-#### Deploying OmniDB behind a reverse proxy
+## 4.3. Deploying OmniDB behind a reverse proxy
 
 In this case OmniDB won't be accessed directly but through a properly configured
 reverse proxy.

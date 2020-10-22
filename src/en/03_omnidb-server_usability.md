@@ -55,13 +55,11 @@ Options:
 
 - `Management Options`: Several options to manage the currently configured backend
 database.
+```
 
-the user must be aware of how OmniDB works so
-the environment can be properly configured taking the infrastructure into account.
+## 3.1. OmniDB User Files
 
-#### OmniDB User Files
-
-`omnidb-server` can is supposed to be pointed to a directory that contains files
+`omnidb-server` is supposed to be pointed to a directory that contains files
 being used at execution time:
 
 - `config.py`: Configuration file.
@@ -79,7 +77,7 @@ does not contain existing files, `OmniDB` will create them for you and run. User
 may prefer to run first `omnidb-server --init`, which will just create the default
 files allowing you can adjust settings before starting the application.
 
-#### OmniDB Backend Database
+## 3.2. OmniDB Backend Database
 
 OmniDB requires a database to store its metadata, containing user and connection
 details.
@@ -108,7 +106,7 @@ Adjust the connection parameters accordingly.
 When running `omnidb-server`, the target database will be configured and migrations
 will be executed to create required objects.
 
-#### Authentication Methods
+## 3.3. Authentication Methods
 
 By default OmniDB authenticates users using its backend database.
 
@@ -141,7 +139,7 @@ customization options. More details in: https://django-auth-ldap.readthedocs.io/
 
 If additional settings are needed, just amend `config.py` accordingly.
 
-#### OmniDB configuration file
+## 3.4. OmniDB configuration file
 
 Apart from database and authentication settings, the configuration file (`config.py`)
 contains all settings required to properly deploy OmniDB according to the user's

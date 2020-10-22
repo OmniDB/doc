@@ -20,12 +20,4 @@ sensation is that there is no difference when he/she manipulates different DBMS,
 it just feels like different connections.
 
 Despite this, OmniDB is built with simplicity in mind, designed to be a fast and
-lightweight browser-based application. OmniDB is also powered by the WebSocket
-technology, allowing the user to execute multiple queries and procedures in
-multiple databases in multiple hosts in background.
-
-OmniDB is also secure. All OmniDB user data are stored encrypted, and no
-database password is stored at all. When the user first connects to a database,
-OmniDB asks for the password. This password is encrypted and stored in memory
-for a specific amount of time. When this time expires, OmniDB asks the password
-again. This ensures maximum security for the database OmniDB is connecting to.
+lightweight browser-based application.
