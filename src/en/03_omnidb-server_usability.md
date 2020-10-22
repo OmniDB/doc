@@ -55,7 +55,6 @@ Options:
 
 - `Management Options`: Several options to manage the currently configured backend
 database.
-```
 
 ## 3.1. OmniDB User Files
 
