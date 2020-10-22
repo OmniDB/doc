@@ -6,7 +6,7 @@ OmniDB can run either as an App or via Browser, combining the flexibility needed
 for various access paths with a design that puts security first.
 
 Since early development, OmniDB was designed as an browser-based app.
-Consequently, it runs in any browser, from any operational system. It can be
+Consequently, it runs in most browsers, from any operational system. It can be
 accessed by several computers and multiple users, each one of them with his/her
 own group of connections. It also can be hosted in any operational system,
 without the need of install any dependencies. We will see further details on

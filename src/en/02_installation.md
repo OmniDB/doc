@@ -70,7 +70,7 @@ message.
 
 More details about `omnidb-server` can be found in Chapter 3 of this documentation.
 
-## 2.2. OmniDB with Oracle
+## 2.2. OmniDB With Oracle
 
 OmniDB app and server does not require any piece of additional software, as
 explained above. But if you are going to connect to an *Oracle* database, then

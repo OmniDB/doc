@@ -68,7 +68,7 @@ The following parameters are required:
 - `LISTENING_PORT`: Specify a port to which the load balancer will redirect all
 OmniDB server requests.
 
-OmniDB will not use `SSL` but it is recommended that you also enable the following
+**IMPORTANT**: OmniDB will not use `SSL` but it is recommended that you also enable the following
 two settings:
 
 - `SESSION_COOKIE_SECURE`: `True`

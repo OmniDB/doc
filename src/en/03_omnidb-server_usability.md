@@ -138,7 +138,7 @@ customization options. More details in: https://django-auth-ldap.readthedocs.io/
 
 If additional settings are needed, just amend `config.py` accordingly.
 
-## 3.4. OmniDB configuration file
+## 3.4. OmniDB Configuration File
 
 Apart from database and authentication settings, the configuration file (`config.py`)
 contains all settings required to properly deploy OmniDB according to the user's

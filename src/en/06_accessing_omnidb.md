@@ -1,8 +1,12 @@
 # 6. Accessing OmniDB
 
-OmniDB comes only with the user *admin*. If you are using the server version,
+- Web version: OmniDB comes only with the user *admin*. If you are using the server version,
 the first thing to do is sign in as *admin*, the default password is *admin*.
-You don't need to login in the app version.
+
+**IMPORTANT**: create a new superuser, login with the new user and remove the old admin.
+
+- App version:
+No login.
 
 If accessing for the first time, you will see the Welcome screen containing several
 useful actions.

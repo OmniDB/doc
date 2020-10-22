@@ -1,6 +1,9 @@
-# 4. Migrating from OmniDB 2 to 3
+# 4. Migrating From OmniDB 2 to 3
 
 ## 4.1 Backend Database
+
+**IMPORTANT: Before running the migration**, make sure that OmniDB 3 already has a `config.py`
+file with backend database properly configured, as explained in chapter 3.
 
 As explained in the previous chapter, OmniDB 3 can be deployed pointing to a `PostgreSQL`
 database as opposed to using the default `SQLite`.
@@ -18,9 +21,6 @@ In order to migrate users and connections `omnidb-server` comes with option `-M`
                     migrate users and connections from OmniDB 2 to 3: -M
                     dbfile
 ```
-
-Before running the migration, make sure that OmniDB 3 already has a `config.py`
-file with backend database properly configured, as explained in chapter 3.
 
 OmniDB 2 stored its data in `SQLite` database file located by default in
 `~/.omnidb/omnidb-server/omnidb.db`. If being used as a service, the file was located
