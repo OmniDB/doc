@@ -39,8 +39,8 @@ User admin already contains connections in the target database. Skip this user? 
 Delete existing connections of user admin from target database before migrating existing ones? (y/n) y
 Existing connections deleted.
 Attempting to create connections of user admin...
-Connection with alias '' created.
-Connection with alias 'test' created.
+Connection with alias 'connection 1' created.
+Connection with alias 'connection 2' created.
 Database migration finished.
 ```
 
