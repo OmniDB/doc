@@ -22,11 +22,11 @@ be automatically configured.
 
 If you read the third chapter of this doc, you will know that OmniDB is supposed
 to be started pointing (with `-d`) to a directory containing the configuration
-file.
+file, `config.py`.
 
 OmniDB's service will **NOT** point to any specific directory so the default will
-be used, which is `~/.omnidb/omnidb-server` as `root` user. Make sure to edit that
-file if deploying OmniDB using the service.
+be used, which is `~/.omnidb/omnidb-server` as `root` user. Make sure to edit the
+`config.py` file in that directory if deploying OmniDB using the service.
 
 If you're not using the service, edit the file that was created following the
 guidelines present in the third chapter (`omnidb-server` Usability).
@@ -87,7 +87,7 @@ Consider this example of OmniDB being hosted behind Nginx:
 omnidb-server -d /home/user/omnidb_dir
 ```
 
-- `/home/user/omnidb_dir`:
+- `/home/user/omnidb_dir/config.py`:
 
 ```
 LISTENING_ADDRESS    = '127.0.0.1'
